@@ -1,0 +1,37 @@
+<section class="intro">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="swiper-slide">
+        <img class="intro_img" src="`+context.arr[i].image+`" alt="`+context.arr[i].text+`">
+        <div class="intro_mask"></div>
+        <div class="intro_img_text `+context.arr[i].textClass+`">`+context.arr[i].text+`</div>
+        <div class="intro_wrapper">
+          <div class="container">
+            <div class="intro_info">
+              <h1 class="title main">`+context.arr[i].title+`</h1>
+              <div class="intro_description">`+context.arr[i].description+`</div>
+              <a class="btn-or" href="`+context.arr[i].link+`">Подробнее о туре</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  @@include("./service.html", {
+    context: {
+      arr: [
+        {'image': './img/service-1.png', 'name': 'Туры по стране', 'link': './tours.html',},
+        {'image': './img/service-2.png', 'name': 'Бронирование отелей', 'link': './hotel.html',},
+        {'image': './img/service-3.png', 'name': 'Аренда автомобилей', 'link': './auto.html',},
+        {'image': './img/service-4.png', 'name': 'Экскурсии на природу', 'link': './excursion.html',},
+        {'image': './img/service-5.png', 'name': 'Корпоративный отдых', 'link': './corporate.html',},
+      ]
+    }
+  })
+
+</section>

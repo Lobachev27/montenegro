@@ -1,0 +1,227 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.article_page{
+  position: relative;
+  margin-top: -130px;
+  z-index: 20;
+
+  &_wrapper{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px $shadow-btn-main-two;
+    padding: 100px;
+    z-index: 20;
+    @media screen and ($desktop1) {
+      padding: 70px;
+    }
+    @media screen and ($tablet2) {
+      padding: 70px 50px;
+    }
+    @media screen and ($tablet1) {
+      padding: 60px 40px;
+    }
+    @media screen and ($mobile3) {
+      padding: 40px 20px;
+    }
+  }
+
+  &_back{
+    position: relative;
+    font-family: 'Gilroy-Bold';
+    font-size: $text-size-s;
+    color: $text-imp-color;
+    margin-left: 25px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+    }
+
+    &:before{
+      position: absolute;
+      font-family: 'FontAwesome';
+      content: "←";
+      left: -25px;
+    }
+
+    &:hover{
+      color: $text-imp-color-hover;
+      transition: all 0.3s;
+    }
+
+    &.stock_back{
+      display: block;
+      margin-top: 40px;
+    }
+  }
+
+  &_box{
+
+    &.one{
+      margin-top: 50px;
+      margin-bottom: 40px;
+      @media screen and ($desktop1) {
+        margin-top: 40px;
+      }
+      @media screen and ($tablet1) {
+        margin-top: 30px;
+      }
+    }
+
+    &.two{
+      margin-bottom: 40px;
+      @media screen and ($tablet1) {
+        display: grid;
+        flex-direction: column;
+      }
+    }
+
+    &.three{
+      margin-bottom: 50px;
+      @media screen and ($desktop1) {
+        margin-bottom: 40px;
+      }
+      @media screen and ($tablet1) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &_caption{
+    font-family: 'Gilroy-Black';
+    font-size: $caption-size-xs;
+    margin-bottom: 30px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xxxl;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-xxl;
+    }
+    @media screen and ($tablet1) {
+      font-size: $text-size-xl;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-l;
+    }
+
+    &.min{
+      font-size: $text-size-l;
+      margin-bottom: 20px;
+      @media screen and ($desktop1) {
+        font-size: $text-size-m;
+      }
+      @media screen and ($mobile3) {
+        font-size: $text-size-s;
+      }
+    }
+  }
+  &_description{;
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    @media screen and ($mobile3) {
+      font-size: $text-size-xs;
+    }
+
+    & p{
+      margin-bottom: 20px;
+    }
+  }
+
+  &_img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+
+    &.one{
+      float: right;
+      height: 350px;
+      width: 680px;
+      margin: 0 0 20px 45px;
+      @media screen and ($desktop1) {
+        height: 305px;
+        width: 550px;
+        margin: 0 0 20px 30px;
+      }
+      @media screen and ($tablet2) {
+        height: 270px;
+        width: 450px;
+      }
+      @media screen and ($tablet1) {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-bottom: 30px;
+      }
+      @media screen and ($mobile5) {
+        height: 220px;
+      }
+      @media screen and ($mobile3) {
+        width: 100%;
+        height: 35vw;
+      }
+    }
+
+    &.two{
+      grid-area: i-two;
+      width: 100%;
+      height: 100%;
+    }
+
+    &.three{
+      grid-area: i-three;
+      width: 100%;
+      height: 100%;
+    }
+
+    &.four{
+      grid-area: i-four;
+      width: 100%;
+      height: 100%;
+    }
+
+    &_box{
+      float: left;
+      width: 50%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr auto;
+      grid-template-areas:
+        "i-two i-three"
+        "i-four i-four";
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      /*height: 580px;*/
+      margin: 0px 45px 20px 0;
+      @media screen and ($desktop1) {
+        width: 55%;
+        /*height: 520px;*/
+        margin: 0px 30px 20px 0;
+      }
+      @media screen and ($tablet2) {
+        width: 50%;
+        /*height: 420px;*/
+      }
+      @media screen and ($tablet1) {
+        width: 100%;
+        /*height: 520px;*/
+        float: none;
+        order: 1;
+        margin: 30px 0 0 0;
+      }
+      @media screen and ($mobile5) {
+        /*height: 420px;*/
+      }
+      @media screen and ($mobile3) {
+        width: 100%;
+        /*height: 70vw;*/
+        grid-gap: 3vw;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+      }
+    }
+  }
+}

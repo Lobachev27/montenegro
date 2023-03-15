@@ -1,0 +1,252 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.header {
+  position: relative;
+  z-index: 20;
+
+  &-mobile {
+    position: fixed;
+    display: none;
+    grid-template-rows: auto 110px 50px 80px;
+    align-items: center;
+    width: 360px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    padding: 50px;
+    background-color: #ffffff;
+    box-shadow: -15px 10px 15px -15px $shadow-btn-main-two;
+    border-radius: 0 0 0 20px;
+    z-index: 200;
+    @media screen and ($tablet1) {
+      display: grid;
+      right: -400px;
+      transition: 1.5s;
+      overflow: hidden;
+    }
+    @media screen and ($mobile2) {
+      grid-template-rows: auto 80px 40px 70px;
+      width: 320px;
+      padding: 50px 40px;
+    }
+    @media screen and ($mobile1) {
+      grid-template-rows: auto 80px 30px 70px;
+      padding: 30px 40px;
+    }
+
+    &.active{
+      @media screen and ($tablet1) {
+        /*transform: translateX(-400px);*/
+        right: 0;
+        transition: right 1.5s;
+        /*overflow-y: visible;*/
+      }
+    }
+  }
+
+  &-desktop {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 110px auto 160px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    top: 45px;
+    margin-left: -8px;
+    padding: 0px 8px;
+    z-index: 20;
+    @media screen and ($tablet2) {
+      grid-template-columns: 85px auto 160px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 85px auto 30px;
+    }
+    @media screen and ($mobile1) {
+      grid-template-columns: 85px auto;
+      justify-items: end;
+    }
+  }
+
+  &_logo {
+    &_img {
+      height: 89px;
+      width: auto;
+      transition: all 0.3s;
+      @media screen and ($tablet2) {
+        height: 74px;
+        width: auto;
+      }
+      @media screen and ($tablet1) {
+        height: 74px;
+        width: auto;
+      }
+
+      &:hover{
+        transform: scale(0.85);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 150px;
+    padding-right: 100px;
+    @media screen and ($desktop1) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @media screen and ($tablet2) {
+      padding-left: 50px;
+      padding-right: 30px;
+    }
+    @media screen and ($tablet1) {
+      display: none;
+    }
+
+    &.mobile{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 0 30px 0;
+      @media screen and ($mobile2) {
+        padding-bottom: 30px;
+      }
+      @media screen and ($mobile1) {
+        padding-bottom: 15px;
+      }
+    }
+
+    &_item {
+      font-family: 'Gilroy-Medium';
+      font-size: $text-size-xs;
+      color: $text-color-main;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 7px 0;
+      @media screen and ($tablet2) {
+        font-size: $text-size-xxs;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $text-imp-color-hover;
+        transition: all 0.3s;
+      }
+
+      &.active {
+        color: $text-imp-color;
+        border-bottom: 2px solid $text-imp-color;
+        padding-bottom: 5px;
+      }
+
+      &.mobile{
+        font-family: 'Gilroy-Semibold';
+        font-weight: normal;
+        font-size: $text-size-xs;
+      }
+    }
+  }
+
+  &_burger {
+    display: none;
+    @media screen and ($tablet1) {
+      display: flex;
+      justify-content: flex-end;
+      background: url("../img/burger-menu.png") no-repeat 0px;
+      background-position: right;
+      width: 25px;
+      height: 15px;
+      order: 1;
+    }
+
+    &:hover {
+      @media screen and ($tablet1) {
+        cursor: pointer;
+      }
+    }
+
+    &.white{
+      @media screen and ($tablet1) {
+        background: url("../img/burger-menu-white.png") no-repeat 0px;
+        width: 25px;
+        height: 15px;
+      }
+    }
+  }
+
+  &_cross {
+    display: none;
+    @media screen and ($tablet1) {
+      position: absolute;
+      display: block;
+      background: url("../img/cross-menu.png") no-repeat 0px;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      top: 30px;
+      right: 20px;
+    }
+
+    &:hover {
+      @media screen and ($tablet1) {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and ($mobile1) {
+      display: none;
+    }
+
+    &.mobile{
+      align-items: flex-start;
+      @media screen and ($mobile1) {
+        display: flex;
+      }
+    }
+
+    &_number {
+      font-family: 'Gilroy-ExtraBold';
+      font-weight: normal;
+      font-size: $text-size-m;
+      color: $text-color-main;
+      margin-bottom: 10px;
+      @media screen and ($tablet2) {
+        font-size: $text-size-s;
+      }
+    }
+  }
+
+  &_mail{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-weight: bold;
+    font-size: $text-size-s;
+    color: $text-color-main;
+    @media screen and ($mobile2) {
+      font-size: $text-size-xs;
+    }
+  }
+
+  &_address{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    color: $text-color-main;
+    @media screen and ($mobile2) {
+      font-size: $text-size-xs;
+    }
+  }
+}

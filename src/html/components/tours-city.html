@@ -1,0 +1,29 @@
+<section class="auto mgt-60">
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Лучшие</span>
+      <h2 class="title">Туры в Которе</h2>
+    </div>
+    <div class="auto_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="tours_city_box">
+        <a href="`+context.arr[i].link+`">
+          <img class="auto_img" src="`+context.arr[i].image+`">
+        </a>
+        <div class="tours_city_info">
+          <div class="tours_city_row">
+            <div class="hotel_name">`+context.arr[i].caption+`</div>
+            `+context.arr[i].include+`
+          </div>
+          <div class="hotel_stars">`+context.arr[i].stars+`</div>
+          `+context.arr[i].more+`
+          <div class="hotel_extra">
+            <div class="hotel_price">`+context.arr[i].price+`</div>
+            <a class="btn-or request" href="`+context.arr[i].link+`">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

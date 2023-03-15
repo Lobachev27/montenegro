@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Туры"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: true,
+    linkActive: 1,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/screen.html", {
+    context: {
+      image: './img/screen-1.jpg',
+      title: 'Туры',
+      way: '<div class="page_way"><a class="page_way_link" href="./">Главная</a><span> — </span><p class="page_way_link">Туры</p></div>',
+    }
+  })
+
+  @@include("./components/tours-list.html", {
+    context: {
+      arr: [
+        {
+          image: './img/directions-2.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Будва</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-1.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Котор</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-4.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Херцег-Нови</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-3.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Бар</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-7.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Бечичи</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-8.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Тиват</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+      ]
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

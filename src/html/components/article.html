@@ -1,0 +1,34 @@
+<section class="necessary mgt-60">
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Перед поездкой почитайте</span>
+      <h2 class="title">Полезные статьи</h2>
+    </div>
+    <div class="article_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="article">
+        <span class="article_label">`+context.arr[i].label+`</span>
+        <a href="`+context.arr[i].link+`">
+          <img class="article_img" src="`+context.arr[i].image+`">
+        </a>
+        <div class="article_info">
+          <div>
+            <div class="article_caption">`+context.arr[i].caption+`</div>
+            <div class="article_description">`+context.arr[i].description+`</div>
+          </div>
+          <a class="article_link" href="`+context.arr[i].link+`">Читать дальше <i>→</i></a>
+        </div>
+      </div>
+      }
+    </div>
+    <nav class="page_nav">
+      <a class="page_nav_prev" href="javascript:void(0);">←</a>
+      <a class="page_nav_number active" href="javascript:void(0);">1</a>
+      <a class="page_nav_number" href="javascript:void(0);">2</a>
+      <a class="page_nav_number" href="javascript:void(0);">3</a>
+      <a class="page_nav_number" href="javascript:void(0);">...</a>
+      <a class="page_nav_number" href="javascript:void(0);">19</a>
+      <a class="page_nav_next" href="javascript:void(0);">→</a>
+    </nav>
+  </div>
+</section>

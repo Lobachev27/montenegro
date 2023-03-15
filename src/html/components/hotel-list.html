@@ -1,0 +1,77 @@
+<section class="necessary mgt-60">
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Выберите</span>
+      <h2 class="title">Отели в Черногории</h2>
+    </div>
+    <div class="filter">
+      <h3 class="filter_name">Поиск отеля</h3>
+      <form class="filter_form">
+        <div class="filter_select">
+          <div class="filter_select_main">Город</div>
+          <div class="filter_select_list">
+            <div class="filter_select_item">Котор</div>
+            <div class="filter_select_item">Будва</div>
+            <div class="filter_select_item">Херцег-Нови</div>
+            <div class="filter_select_item">Петровац</div>
+            <div class="filter_select_item">Бар</div>
+            <div class="filter_select_item">Бечичи</div>
+            <div class="filter_select_item">Тиват</div>
+          </div>
+        </div>
+        <div class="filter_calendar_wrapper">
+          <input id="datepicker" class="filter_calendar" type="text" placeholder="Дата заезда" autocomplete="off">
+          <label for="datepicker">&nbsp;</label>
+        </div>
+        <div class="filter_select">
+          <div class="filter_select_main">Количество людей</div>
+          <div class="filter_select_list">
+            <div class="filter_select_item">1</div>
+            <div class="filter_select_item">2</div>
+            <div class="filter_select_item">3</div>
+            <div class="filter_select_item">4</div>
+            <div class="filter_select_item">5</div>
+            <div class="filter_select_item">6</div>
+            <div class="filter_select_item">7</div>
+          </div>
+        </div>
+        <div class="filter_select">
+          <div class="filter_select_main">Сортировать по:</div>
+          <div class="filter_select_list">
+            <div class="filter_select_item">Популярности</div>
+            <div class="filter_select_item">Цене</div>
+            <div class="filter_select_item">Рейтингу</div>
+          </div>
+        </div>
+        <button class="btn-bl" type="submit">Поиск отеля</button>
+      </form>
+    </div>
+    <div class="hotel_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="hotel_box">
+        <a href="`+context.arr[i].link+`">
+          <img class="hotel_img" src="`+context.arr[i].image+`">
+        </a>
+        <div class="hotel_info">
+          <div class="hotel_name">`+context.arr[i].name+`</div>
+          <div class="hotel_stars">`+context.arr[i].stars+`</div>
+          <div class="hotel_description">`+context.arr[i].description+`</div>
+          <div class="hotel_extra">
+            <div class="hotel_price">`+context.arr[i].price+`</div>
+            <a class="btn-or request" href="`+context.arr[i].link+`">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    <nav class="page_nav">
+      <a class="page_nav_prev" href="javascript:void(0);">←</a>
+      <a class="page_nav_number active" href="javascript:void(0);">1</a>
+      <a class="page_nav_number" href="javascript:void(0);">2</a>
+      <a class="page_nav_number" href="javascript:void(0);">3</a>
+      <a class="page_nav_number" href="javascript:void(0);">...</a>
+      <a class="page_nav_number" href="javascript:void(0);">12</a>
+      <a class="page_nav_next" href="javascript:void(0);">→</a>
+    </nav>
+  </div>
+</section>

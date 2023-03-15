@@ -1,0 +1,21 @@
+<section class="directions @@context.class">
+  <div class="directions_bg"></div>
+  <div class="container">
+    <div class="directions_bg_two"></div>
+    <div class="title_box">
+      <span class="title_decor">Самые популярные</span>
+      <h2 class="title">Направления туров</h2>
+    </div>
+    <div class="directions_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="directions_box `+context.arr[i].class+`">
+        <img class="directions_img" src="`+context.arr[i].image+`">
+        <div class="directions_mask"></div>
+        `+context.arr[i].content+`
+        <a class="directions_link" href="`+context.arr[i].link+`"></a>
+      </div>
+      }
+    </div>
+    <a class="directions_more_mobile" href="javascript:void(0);">Показать еще</a>
+  </div>
+</section>

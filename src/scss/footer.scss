@@ -1,0 +1,204 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer{
+  position: relative;
+  background-color: #ebf0f7;
+  z-index: 20;
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 90px 0 80px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 4fr 3fr 3fr 2fr 4fr;
+      padding: 90px 0 80px;
+    }
+    @media screen and ($tablet2) {
+      padding: 70px 0 70px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 80px;
+      height: 360px;
+    }
+    @media screen and ($mobile5) {
+      grid-gap: 40px;
+    }
+    @media screen and ($mobile3) {
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 20px;
+      height: auto;
+      padding: 50px;
+    }
+    @media screen and (max-width: 440px) {
+      padding: 50px 30px;
+    }
+  }
+
+  &_left{
+    display: grid;
+    grid-template-rows: 150px auto 20px;
+    @media screen and ($desktop1) {
+      grid-template-rows: 120px auto 20px;
+      padding-right: 30px;
+    }
+    @media screen and ($tablet1) {
+      padding: 0;
+    }
+    @media screen and ($mobile3) {
+      grid-template-rows: 100px 60px 20px;
+      justify-items: center;
+    }
+    @media screen and (max-width: 440px) {
+      grid-template-rows: 100px 80px 20px;
+    }
+  }
+  &_logo {
+
+    &_img {
+      height: 89px;
+      width: auto;
+      transition: all 0.3s;
+      @media screen and ($tablet2) {
+        height: 74px;
+        width: auto;
+      }
+
+      &:hover{
+        transform: scale(0.85);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &_description{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    @media screen and ($tablet2) {
+      font-size: $text-size-xs;
+    }
+    @media screen and ($mobile3) {
+      text-align: center;
+    }
+  }
+
+  &_copyright{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    opacity: 0.5;
+    @media screen and ($tablet2) {
+      font-size: $text-size-xs;
+    }
+  }
+
+  &_nav{
+    display: flex;
+    flex-direction: column;
+    @media screen and ($tablet1) {
+      display: none;
+    }
+
+    &_name{
+      font-family: 'Gilroy-Black';
+      font-size: $text-size-m;
+      border-bottom: 2px solid $border-color-main;
+      padding-bottom: 5px;
+      @media screen and ($tablet2) {
+        font-size: $text-size-s;
+        width: 45px;
+      }
+
+      &.one{
+        width: 50px;
+      }
+
+      &.two{
+        width: 57px;
+      }
+
+      &.three{
+        width: 45px;
+      }
+    }
+
+    &_item{
+      font-family: 'Museo-Sans-Cyrl-300';
+      font-size: $text-size-s;
+      color: $text-color-main;
+      margin-top: 20px;
+      @media screen and ($tablet2) {
+        font-size: $text-size-xs;
+        margin-top: 20px;
+      }
+
+      &:hover{
+        color: $text-imp-color-hover;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &_right{
+    display: grid;
+    grid-template-rows: auto auto auto 20px;
+    justify-items: end;
+    padding-left: 50px;
+    @media screen and ($desktop1) {
+      padding-left: 30px;
+    }
+    @media screen and ($tablet1) {
+      padding: 0;
+    }
+    @media screen and ($mobile3) {
+      grid-template-rows: 90px 30px 60px 20px;
+      justify-items: center;
+    }
+    @media screen and (max-width: 440px) {
+      grid-template-rows: 90px 30px 80px 20px;
+    }
+  }
+
+  &_phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_number {
+      font-family: 'Gilroy-ExtraBold';
+      font-weight: normal;
+      font-size: $text-size-m;
+      color: $text-color-main;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_mail{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-weight: bold;
+    font-size: $text-size-s;
+    color: $text-color-main;
+    @media screen and ($tablet2) {
+      font-size: $text-size-xs;
+    }
+  }
+
+  &_address,
+  &_develop{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    text-align: right;
+    @media screen and ($tablet2) {
+      font-size: $text-size-xs;
+    }
+    @media screen and ($mobile3) {
+      text-align: center;
+    }
+  }
+
+  &_link{
+    color: $text-imp-color;
+  }
+}

@@ -1,0 +1,435 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.intro {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+  z-index: 2;
+
+  &_img{
+    object-position: 73% 50%;
+    object-fit: cover;
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+
+    &_text{
+      /*position: absolute;
+      width: 972px;
+      height: 350px;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;*/
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Gilroy-Black';
+      text-transform: uppercase;
+      text-align: center;
+      color: $text-imp-color;
+      width: 972px;
+      height: 350px;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      @media screen and ($desktop1) {
+        width: 760px;
+        height: 280px;
+      }
+      @media screen and ($tablet2) {
+        bottom: 60px;
+      }
+      @media screen and ($tablet1) {
+        width: 748px;
+        height: 280px;
+      }
+      @media screen and ($mobile5) {
+        width: 556px;
+        height: 200px;
+      }
+      @media screen and ($mobile3) {
+        width: 100%;
+        height: 40vw;
+        bottom: 40px;
+      }
+
+      &.kotor,
+      &.budva,
+      &.tivat{
+        font-size: 300px;
+        @media screen and ($desktop1) {
+          font-size: 238px;
+        }
+        @media screen and ($tablet1) {
+          font-size: 230px;
+        }
+        @media screen and ($mobile5) {
+          font-size: 170px;
+        }
+        @media screen and ($mobile3) {
+          font-size: 30vw;
+        }
+      }
+
+      &.herceg{
+        font-size: 200px;
+        line-height: 0.9em;
+        @media screen and ($desktop1) {
+          font-size: 160px;
+        }
+        @media screen and ($mobile5) {
+          font-size: 120px;
+        }
+        @media screen and ($mobile3) {
+          font-size: 23vw;
+        }
+      }
+
+      &.petrovac{
+        font-size: 192px;
+        @media screen and ($desktop1) {
+          font-size: 150px;
+        }
+        @media screen and ($mobile5) {
+          font-size: 110px;
+        }
+        @media screen and ($mobile3) {
+          font-size: 19vw;
+        }
+      }
+
+      &.bar{
+        font-size: 340px;
+        @media screen and ($desktop1) {
+          font-size: 290px;
+        }
+        @media screen and ($mobile5) {
+          font-size: 220px;
+        }
+        @media screen and ($mobile3) {
+          font-size: 37vw;
+        }
+      }
+
+      &.becici{
+        font-size: 260px;
+        @media screen and ($desktop1) {
+          font-size: 204px;
+        }
+        @media screen and ($mobile5) {
+          font-size: 150px;
+        }
+        @media screen and ($mobile3) {
+          font-size: 26vw;
+        }
+      }
+    }
+  }
+
+  &_mask{
+    position: absolute;
+    background: url("../img/mask.png") no-repeat 0px;
+    background-position: 60% 50%;
+    background-size: cover;
+    width: 100%;
+    min-height: 600px;
+    height: 110vh;
+    top: 0;
+    z-index: 2;
+    @media screen and ($desktop1) {
+      background-position: 75% 50%;
+    }
+    @media screen and ($tablet2) {
+      background-position: 60% 50%;
+    }
+  }
+
+  &_wrapper{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    min-height: 600px;
+    height: 100vh;
+    top: 0;
+    z-index: 20;
+
+    & > .container{
+      height: 100%;
+      z-index: 20;
+    }
+  }
+
+  &_pagination_wrapper{
+    position: absolute;
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    & > .container{
+      height: 100%;
+      z-index: 10;
+    }
+  }
+
+  &_info{
+    position: absolute;
+    box-sizing: border-box;
+    width: 800px;
+    height: auto;
+    top: 42%;
+    left: 16px;
+    transform: translateY(-50%);
+    z-index: 10;
+    @media screen and ($tablet2) {
+      width: 600px;
+    }
+    @media screen and ($tablet1) {
+      width: 400px;
+    }
+    @media screen and ($mobile5) {
+      width: 60%;
+    }
+    @media screen and ($mobile3) {
+      width: 300px;
+      top: 50%;
+      left: 8px;
+    }
+    @media screen and ($mobile1) {
+      width: 280px;
+    }
+  }
+
+  &_description{
+    position: relative;
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-l;
+    width: 520px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @media screen and ($tablet2) {
+      font-size: $text-size-m;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    @media screen and ($tablet1) {
+      font-size: $text-size-s;
+      width: 90%;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    @media screen and ($mobile5) {
+      font-size: $text-size-xs;
+      width: 90%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    @media screen and ($mobile3) {
+      text-shadow: 1px 1px #fff;
+    }
+    @media screen and ($mobile1) {
+      font-size: 13px;
+      width: 100%;
+    }
+
+    &:before{
+      position: absolute;
+      content: "";
+      background-color: $border-color-main;
+      width: 90px;
+      height: 2px;
+      top: -30px;
+      @media screen and ($tablet2) {
+        top: -20px;
+      }
+      @media screen and ($tablet1) {
+        top: -20px;
+      }
+      @media screen and ($mobile5) {
+        top: -15px;
+      }
+      @media screen and ($mobile1) {
+        top: -15px;
+      }
+    }
+  }
+
+  & .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: -1;
+  }
+
+  & .swiper-wrapper{
+    z-index: 3;
+  }
+
+  & .swiper-slide {
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+  }
+
+  & .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    transition: 0.3s opacity;
+    height: auto;
+    width: 11px;
+    top: 50%;
+    left: 90%;
+    z-index: 10;
+    @media screen and ($tablet2) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      text-align: center;
+      transition: 0.3s opacity;
+      width: 100%;
+      height: 11px;
+      z-index: 10;
+    }
+  }
+
+  & .swiper-pagination-bullets {
+    height: auto;
+    top: 50%;
+    left: calc(50% + 790px);
+    transform: translate(-50%, -50%);
+    @media screen and ($desktop1) {
+      left: calc(50% + 570px);
+    }
+    @media screen and ($tablet2) {
+      width: 100%;
+      top: calc(100% - 45px);
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    @media screen and ($tablet1) {
+      top: calc(100% - 30px);
+    }
+  }
+
+  & .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 20px 0;
+    display: block;
+    @media screen and ($tablet2) {
+      margin: 0 50px;
+    }
+    @media screen and ($tablet1) {
+      margin: 0 30px;
+    }
+    @media screen and ($mobile3) {
+      margin: 0 20px;
+    }
+    @media screen and ($mobile1) {
+      margin: 0 15px;
+    }
+  }
+
+  & .swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+  }
+
+  & .swiper-pagination-bullet {
+    position: relative;
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 3px solid white;
+    background-color: #8999ab;
+    opacity: 1;
+    outline: none;
+  }
+
+  & .swiper-pagination-bullet-active {
+    border: none;
+    opacity: 1;
+    background-color: $btn-color-main;
+  }
+
+  & .swiper_slide_name{
+    font-family: 'Gilroy-Regular';
+    font-size: $text-size-s;
+    color: #8999ab;
+    position: absolute;
+    right: 40px;
+    width: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    outline: none;
+    @media screen and ($tablet2) {
+      right: 0;
+      left: 50%;
+      width: 100px;
+      top: 15px;
+      transform: translate(-50%, 0%);
+      text-align: center;
+    }
+    @media screen and ($tablet1) {
+      display: none;
+    }
+  }
+
+  & .swiper-pagination-bullet-active .swiper_slide_name{
+    font-family: 'Gilroy-Bold';
+    font-size: $text-size-s;
+    color: $text-imp-color;
+    outline: none;
+  }
+}
+
+.screen{
+  position: relative;
+  height: 500px;
+  @media screen and ($tablet2) {
+    height: 450px;
+  }
+  @media screen and ($tablet1) {
+    height: 420px;
+  }
+
+  &_img{
+    object-position: top;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_filter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $btn-color-main-two;
+    top: 0;
+    opacity: 0.7;
+  }
+
+  &_mask{
+    position: absolute;
+    background: url("../img/effekt-akvareli.png") repeat-x;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    z-index: 10;
+  }
+}

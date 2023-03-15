@@ -1,0 +1,41 @@
+<section class="auto">
+  <div class="auto_bg"></div>
+  <div class="auto_bg_two"></div>
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Разветвленная</span>
+      <h2 class="title">Аренда автомобилей</h2>
+    </div>
+  </div>
+  <div class="auto_slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <div class="swiper-slide">
+          <div class="auto_box">
+            <img class="auto_img" src="`+context.arr[i].image+`">
+            <div class="auto_info">
+              <div class="auto_name">`+context.arr[i].brand+`</div>
+              <div class="auto_name_two">`+context.arr[i].model+`</div>
+              <div class="auto_more">
+                <div class="auto_item engine">`+context.arr[i].engine+`</div>
+                <div class="auto_item snowflake">`+context.arr[i].snowflake+`</div>
+                <div class="auto_item transmission">`+context.arr[i].transmission+`</div>
+                <div class="auto_item music">`+context.arr[i].music+`</div>
+                <div class="auto_item power">`+context.arr[i].power+`</div>
+                <div class="auto_item seat">`+context.arr[i].seat+`</div>
+              </div>
+              <div class="auto_extra">
+                <div class="auto_price">`+context.arr[i].price+`</div>
+                <a class="btn-or request rent_auto" href="#rentAuto">Арендовать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

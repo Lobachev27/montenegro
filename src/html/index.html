@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Montenegro Tours - Создайте идеальный отпуск в Черногории"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: false,
+    linkActive: false,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/intro.html", {
+    context: {
+      arr: [
+        {'image': './img/kotor.jpg', 'text': 'Котор', 'textClass': 'kotor', 'title': 'Создайте идеальный отпуск в Черногории', 'description': 'Организация незабываемого индивидуального отдыха в страну с уникальной природой, солнечной погодой и доступными ценами.', 'link': './tours_city.html',},
+        {'image': './img/budva.jpg', 'text': 'Будва', 'textClass': 'budva', 'title': 'Создайте идеальный отпуск в Черногории', 'description': 'Организация незабываемого индивидуального отдыха в страну с уникальной природой, солнечной погодой и доступными ценами.', 'link': './tours_city.html',},
+        {'image': './img/herceg-novi.jpg', 'text': 'Херцег Нови', 'textClass': 'herceg', 'title': 'Создайте идеальный отпуск в Черногории', 'description': 'Организация незабываемого индивидуального отдыха в страну с уникальной природой, солнечной погодой и доступными ценами.', 'link': './tours_city.html',},
+        {'image': './img/kotor.jpg', 'text': 'Петровац', 'textClass': 'petrovac', 'title': 'Создайте идеальный отпуск в Черногории', 'description': 'Организация незабываемого индивидуального отдыха в страну с уникальной природой, солнечной погодой и доступными ценами.', 'link': './tours_city.html',},
+        {'image': './img/budva.jpg', 'text': 'Бар', 'textClass': 'bar', 'title': 'Создайте идеальный отпуск в Черногории', 'description': 'Организация незабываемого индивидуального отдыха в страну с уникальной природой, солнечной погодой и доступными ценами.', 'link': './tours_city.html',},
+        {'image': './img/herceg-novi.jpg', 'text': 'Бечичи', 'textClass': 'becici', 'title': 'Создайте идеальный отпуск в Черногории', 'description': 'Организация незабываемого индивидуального отдыха в страну с уникальной природой, солнечной погодой и доступными ценами.', 'link': './tours_city.html',},
+        {'image': './img/kotor.jpg', 'text': 'Тиват', 'textClass': 'tivat', 'title': 'Создайте идеальный отпуск в Черногории', 'description': 'Организация незабываемого индивидуального отдыха в страну с уникальной природой, солнечной погодой и доступными ценами.', 'link': './tours_city.html',},
+      ]
+    }
+  })
+
+  @@include("./components/info.html")
+
+  @@include("./components/directions.html", {
+    context: {
+      class: '',
+      arr: [
+        {
+          class: 'one',
+          image: './img/directions-1.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Котор</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'two',
+          image: './img/directions-2.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Будва</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'three',
+          image: './img/directions-3.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Бар</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'four',
+          image: './img/directions-4.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Херцег-Нови</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'five',
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'six',
+          image: './img/directions-6.jpg',
+          content: '<div class="directions_more"><div class="directions_more_icon"></div><div class="directions_more_text"><span>Все</span> направления</div></div>',
+          link: './tours.html',
+        },
+      ]
+    }
+  })
+
+  @@include("./components/hotel.html", {
+    context: {
+      arr: [
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+      ]
+    }
+  })
+
+  @@include("./components/auto.html", {
+    context: {
+      arr: [
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+      ]
+    }
+  })
+
+  @@include("./components/necessary.html")
+
+  @@include("./components/application.html")
+
+  @@include("./components/contacts.html", {
+    context: {
+      class: '',
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

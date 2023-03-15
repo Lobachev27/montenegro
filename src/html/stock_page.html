@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Montenegro счастливая неделя"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: true,
+    linkActive: 5,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/screen.html", {
+    context: {
+      image: './img/screen-1.jpg',
+      title: 'Montenegro счастливая неделя',
+      way: '<div class="page_way"><a class="page_way_link" href="./">Главная</a><span> — </span><a class="page_way_link" href="./stock.html">Акции</a><span> — </span><p class="page_way_link">Montenegro счастливая неделя</p></div>',
+    }
+  })
+
+  <section class="directions mgt-60">
+    <div class="container">
+      <div class="title_box">
+        <span class="title_decor">Акция</span>
+        <h2 class="title">Montenegro Счастливая неделя!</h2>
+      </div>
+      <a class="article_page_back stock_back" href="./stock.html">Назад к акциям</a>
+      <div class="stock_page_wrapper">
+        <div class="stock_page_box">
+          <img class="stock_img" src="./img/stock.jpg">
+          <img class="stock_bg max" src="./img/stock_bg.png">
+        </div>
+        <div class="stock_page_info">
+          <div class="stock_page_time">с 01.07.2018 по 07.07.2018</div>
+          <div class="stock_page_caption">Montenegro Счастливая неделя!</div>
+          <div class="stock_page_description">Lorem Ipsum - это текст-"рыба", часто используемый
+            в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице
+            с начала XVI века. В то время некий безымянный печатник создал большую коллекцию </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/hotel-stock.html", {
+    context: {
+      arr: [
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-sea-fort.jpg', 'name': 'Apart Hotel Sea Fort', 'stars': '', 'description': 'Отель занимает 6000 м², состоит из 44 номеров. Здесь вы найдете уютные апартаменты, оснащенные всем.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+      ]
+    }
+  })
+
+  @@include("./components/stock-slider.html", {
+    context: {
+      arr: [
+        {'image': './img/stock.jpg', 'caption': 'Montenegro счастливая неделя!', 'description': 'Дополнительная скидка на отели Будвы', 'link': './stock_page.html',},
+        {'image': './img/stock.jpg', 'caption': 'Montenegro счастливая неделя!', 'description': 'Дополнительная скидка на отели Будвы', 'link': './stock_page.html',},
+        {'image': './img/stock.jpg', 'caption': 'Montenegro счастливая неделя!', 'description': 'Дополнительная скидка на отели Будвы', 'link': './stock_page.html',},
+        {'image': './img/stock.jpg', 'caption': 'Montenegro счастливая неделя!', 'description': 'Дополнительная скидка на отели Будвы', 'link': './stock_page.html',},
+        {'image': './img/stock.jpg', 'caption': 'Montenegro счастливая неделя!', 'description': 'Дополнительная скидка на отели Будвы', 'link': './stock_page.html',},
+        {'image': './img/stock.jpg', 'caption': 'Montenegro счастливая неделя!', 'description': 'Дополнительная скидка на отели Будвы', 'link': './stock_page.html',},
+        {'image': './img/stock.jpg', 'caption': 'Montenegro счастливая неделя!', 'description': 'Дополнительная скидка на отели Будвы', 'link': './stock_page.html',},
+        {'image': './img/stock.jpg', 'caption': 'Montenegro счастливая неделя!', 'description': 'Дополнительная скидка на отели Будвы', 'link': './stock_page.html',},
+      ]
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

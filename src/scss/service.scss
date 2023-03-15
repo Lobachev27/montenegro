@@ -1,0 +1,106 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.service{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 20;
+  @media screen and ($tablet2) {
+    bottom: -375px;
+    transform: translateY(-50%);
+  }
+  @media screen and ($tablet1) {
+    bottom: -400px;
+  }
+  @media screen and ($mobile5) {
+    bottom: -390px;
+    width: 120%;
+    margin-right: -20%;
+  }
+  @media screen and ($mobile3) {
+    bottom: -390px;
+    width: 125%;
+    margin-right: -25%;
+  }
+  @media screen and ($mobile2) {
+    bottom: -330px;
+  }
+  @media screen and ($mobile1) {
+    bottom: -280px;
+  }
+
+  &_link{
+    &:hover .service_img{
+      transform: scale(1.2);
+      transition: all 0.4s;
+    }
+  }
+
+  &_img{
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.4s;
+    box-shadow: 0 7px 15px $shadow-btn-main-two;
+  }
+
+  &_name{
+    position: absolute;
+    bottom: 0;
+    font-family: 'Gilroy-Black';
+    font-size: $text-size-xl;
+    color: $text-color-white;
+    width: 210px;
+    padding: 0 40px 40px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-l;
+      width: 180px;
+      padding: 0 30px 30px;
+    }
+    @media screen and ($mobile1) {
+      font-size: $text-size-s;
+      width: 150px;
+      padding: 0 30px 30px;
+    }
+  }
+
+  & .swiper-container{
+    width: 1600px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 0;
+    @media screen and ($desktop1) {
+      width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      height: auto;
+    }
+    @media screen and ($tablet1) {
+      padding: 0 8px;
+    }
+  }
+
+  & .swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  & .swiper-slide{
+    position: relative;
+    width: 304px;
+    height: auto;
+    border-radius: 10px;
+    @media screen and ($desktop1) {
+      position: relative;
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+    }
+  }
+}

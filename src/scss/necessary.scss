@@ -1,0 +1,593 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.necessary{
+  margin-top: 120px;
+  margin-bottom: 100px;
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 370px 90px 235px;
+    grid-column-gap: 45px;
+    grid-row-gap: 45px;
+    width: 100%;
+    grid-template-areas:
+      "one three four"
+      "two three four"
+      "two five five";
+    margin-top: 100px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 44fr 28fr 28fr;
+      grid-template-rows: 370px 70px 270px;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      margin-top: 70px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 4fr 3fr 3fr;
+      grid-template-rows: 380px 90px 270px;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      margin-top: 70px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto 240px;
+      grid-template-areas:
+              "one two"
+              "three four"
+              "five five";
+      margin-top: 70px;
+    }
+    @media screen and ($mobile5) {
+      grid-template-rows: auto auto auto 270px;
+      grid-template-areas:
+              "one one"
+              "two two"
+              "three four"
+              "five five";
+      margin-top: 70px;
+    }
+    @media screen and ($mobile3) {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto 270px;
+      grid-template-areas:
+              "one"
+              "two"
+              "three"
+              "four"
+              "five";
+      margin-top: 70px;
+    }
+    @media screen and (max-width: 440px) {
+      grid-template-rows: auto auto auto auto 340px;
+      margin-top: 50px;
+    }
+  }
+
+  & .one{
+    grid-area: one;
+  }
+
+  & .two{
+    grid-area: two;
+  }
+
+  & .three{
+    grid-area: three;
+  }
+
+  & .four{
+    grid-area: four;
+  }
+
+  & .five{
+    grid-area: five;
+  }
+}
+
+.excursion{
+  position: relative;
+  display: grid;
+  grid-template-rows: 60px auto auto 45px;
+  grid-row-gap: 10px;
+  border-radius: 10px;
+  padding: 40px;
+  min-height: 340px;
+  @media screen and ($desktop1) {
+    grid-template-rows: 60px auto auto 45px;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  @media screen and ($tablet2) {
+    grid-template-rows: 50px auto auto 45px;
+  }
+
+  &_img{
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  &_filter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $btn-color-main-two;
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  &_label{
+    font-family: 'Museo-Sans-Cyrl-300';
+    color: $text-imp-color;
+    font-size: $text-size-s;
+    @media screen and ($desktop1) {
+      font-size: $text-size-s;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-xs;
+    }
+    @media screen and (max-width: 440px) {
+      font-size: $text-size-xs;
+    }
+  }
+
+  &_caption{
+    font-family: 'Gilroy-Black';
+    color: $text-color-white;
+    font-size: $text-size-xxl;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xl;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-l;
+    }
+    @media screen and (max-width: 440px) {
+      font-size: $text-size-m;
+    }
+  }
+
+  &_description{
+    font-family: 'Museo-Sans-Cyrl-300';
+    color: $text-color-white;
+    font-size: $text-size-s;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+    }
+  }
+
+  &_more{
+    display: grid;
+    grid-template-columns: auto 180px;
+    align-items: center;
+    @media screen and ($desktop1) {
+      grid-template-columns: auto 180px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: auto 160px;
+    }
+    @media screen and (max-width: 440px) {
+      grid-template-columns: auto 140px;
+    }
+  }
+
+  &_price{
+    font-family: 'Gilroy-Black';
+    color: $text-color-white;
+    font-size: $text-size-xxl;
+    @media screen and ($desktop1) {
+      font-size: $text-size-l;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-m;
+    }
+    @media screen and (max-width: 440px) {
+      font-size: $text-size-s;
+    }
+  }
+}
+
+.article{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  line-height: 1em;
+  box-shadow: 0px 5px 20px $shadow-btn-main-two;
+
+  &_wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 45px;
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    @media screen and ($desktop1) {
+      grid-gap: 30px;
+      width: 100%;
+    }
+    @media screen and ($tablet2) {
+      grid-gap: 20px;
+      margin-bottom: 70px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and ($mobile5) {
+      margin-top: 50px;
+    }
+    @media screen and ($mobile3) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &.box{
+    @media screen and ($desktop1) {
+      flex-basis: calc(33.3333% - 30px);
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+    @media screen and ($mobile3) {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &_label{
+    position: absolute;
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-xs;
+    color: $text-color-white;
+    background-color: $btn-color-main-two;
+    top: 30px;
+    left: 30px;
+    padding: 3px 7px;
+    z-index: 20;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xxs;
+      top: 20px;
+      left: 20px;
+      padding: 0 7px;
+    }
+  }
+
+  &_img{
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.4s;
+    @media screen and ($tablet2) {
+      height: 240px;
+    }
+    @media screen and ($tablet1) {
+      height: 200px;
+    }
+    @media screen and ($mobile5) {
+      height: 180px;
+    }
+    @media screen and ($mobile3) {
+      height: 180px;
+    }
+
+    &:hover{
+      transform: scale(1.1);
+      transition: all 0.4s;
+    }
+  }
+
+  &_info{
+    position: relative;
+    padding: 30px;
+    background: white;
+    z-index: 20;
+    @media screen and ($desktop1) {
+      padding: 25px;
+    }
+    @media screen and ($tablet2) {
+      padding: 25px;
+    }
+    @media screen and ($tablet1) {
+      padding: 30px;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px;
+    }
+    @media screen and ($mobile3) {
+      padding: 20px;
+    }
+  }
+
+  &_caption{
+    font-family: 'Gilroy-Black';
+    font-size: $text-size-xxl;
+    line-height: 1.2em;
+    min-height: 28px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xl;
+      min-height: 52px;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-l;
+    }
+    @media screen and ($tablet1) {
+      font-size: $text-size-l;
+    }
+    @media screen and ($mobile5) {
+      font-size: $text-size-l;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-l;
+      min-height: 26px;
+    }
+    @media screen and (max-width: 440px) {
+      font-size: $text-size-m;
+    }
+
+    &.short{
+      @media screen and ($desktop1) {
+        min-height: auto;
+      }
+    }
+  }
+
+  &_description{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    line-height: 2em;
+    min-height: 128px;
+    margin: 10px 0;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+      line-height: 1.5em;
+      min-height: 126px;
+    }
+    @media screen and ($tablet2) {
+      min-height: 147px;
+    }
+    @media screen and ($tablet1) {
+      min-height: 126px;
+    }
+    @media screen and ($mobile5) {
+      min-height: 168px;
+    }
+    @media screen and ($mobile3) {
+      min-height: 84px;
+    }
+
+    &.short{
+      min-height: 105px;
+      @media screen and ($desktop1) {
+        min-height: 80px;
+      }
+      @media screen and ($mobile5) {
+        min-height: 84px;
+      }
+      @media screen and ($mobile3) {
+        min-height: 42px;
+      }
+    }
+  }
+
+  &_link{
+    font-family: 'Gilroy-ExtraBold';
+    font-size: $text-size-xs;
+    color: $text-imp-color;
+
+    & i{
+      font-family: 'FontAwesome';
+      font-size: 16px;
+    }
+
+    &:hover{
+      color: $text-imp-color-hover;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.subscription{
+  position: relative;
+  display: grid;
+  grid-template-rows: 45px auto auto;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px $shadow-btn-main-two;
+  overflow: hidden;
+  padding: 30px;
+  @media screen and ($desktop1) {
+    grid-template-rows: 45px auto auto;
+    padding: 30px 40px;
+  }
+  @media screen and ($mobile3) {
+    grid-template-rows: 45px auto auto;
+    padding: 20px;
+  }
+  @media screen and (max-width: 440px) {
+    grid-template-rows: 60px auto auto;
+    padding: 20px;
+  }
+
+  &_bg{
+    position: absolute;
+    background: url("../img/paper-plane.png") no-repeat 0px;
+    width: 286px;
+    height: 286px;
+    top: -15px;
+    right: -15px;
+  }
+
+  &_caption{
+    font-family: 'Gilroy-Black';
+    font-size: $caption-size-xs;
+    color: $text-imp-color;
+    text-align: center;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xxxl;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-xl;
+    }
+    @media screen and (max-width: 440px) {
+      font-size: $text-size-l;
+    }
+  }
+
+  &_description{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    text-align: center;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+    }
+  }
+
+  &_form{
+    display: grid;
+    grid-template-rows: 60% 40%;
+    align-items: center;
+    height: 100%;
+    @media screen and ($desktop1) {
+      grid-template-rows: 60% 40%;
+    }
+    @media screen and (max-width: 440px) {
+      grid-template-rows: 50% 50%;
+    }
+  }
+
+  &_box{
+    position: relative;
+    text-align: center;
+    margin-bottom: 5px;
+    @media screen and ($desktop1) {
+      margin-bottom: 15px;
+    }
+    @media screen and ($mobile3) {
+      width: calc(100% + 25px);
+    }
+  }
+
+  &_input{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    width: 375px;
+    height: 38px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid $border-color-input;
+    padding-left: 15px;
+    @media screen and ($mobile3) {
+      font-size: $text-size-xs;
+      width: calc(100% - 50px);
+      height: 38px;
+    }
+
+    &::placeholder{
+      color: $text-color-main-three;
+    }
+
+    &:focus{
+      border: 1px solid $btn-color-main;
+    }
+  }
+
+  &_request{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    left: -25px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: $btn-color-main-two;
+    box-shadow: 0px 5px 20px $shadow-btn-main-two;
+    transform: translateY(-50%, -50%);
+    transition: all 0.3s;
+
+    &:before{
+      position: absolute;
+      content: "\f0e0";
+      font-family: 'FontAwesome';
+      color: $text-color-white;
+      font-size: 14px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover{
+      background-color: $btn-color-main-two-hover;
+    }
+  }
+
+  &_confirm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    @media screen and ($desktop1) {
+      align-items: flex-start;
+    }
+
+    &_checked {
+      display: none;
+    }
+
+    &_checked-custom {
+      display: flex;
+      position: relative;
+      min-width: 18px;
+      width: 18px;
+      height: 18px;
+      background-color: #fff;
+      border: 1px solid $text-color-main-two;
+      border-radius: 2px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &_label {
+      font-family: 'Museo-Sans-Cyrl-300';
+      display: flex;
+      font-size: 13px;
+      line-height: 1.5;
+      padding-left: 12px;
+      @media screen and (max-width: 440px) {
+        font-size: 12px;
+      }
+    }
+
+    &_checked:checked+.subscription_confirm_checked-custom {
+      border: 1px solid $btn-color-main;
+    }
+
+    &_checked:checked+.subscription_confirm_checked-custom::before {
+      content: "";
+      display: flex;
+      position: absolute;
+      background: url("../img/icon-checked.png") no-repeat 0px;
+      background-size: cover;
+      width: 12px;
+      height: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

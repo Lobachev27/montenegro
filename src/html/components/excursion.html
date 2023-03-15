@@ -1,0 +1,24 @@
+<section class="auto">
+  <div class="auto_bg"></div>
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Не забудте посетить</span>
+      <h2 class="title">Экскурсии в Которе</h2>
+    </div>
+    <div class="directions_wrapper all">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="excursion">
+        <img class="excursion_img" src="`+context.arr[i].image+`">
+        <div class="excursion_filter"></div>
+        <div class="excursion_label">`+context.arr[i].label+`</div>
+        <div class="excursion_caption">`+context.arr[i].caption+`</div>
+        <div class="excursion_description">`+context.arr[i].description+`</div>
+        <div class="excursion_more">
+          <div class="excursion_price">`+context.arr[i].price+`</div>
+          <a class="btn-or request no-shadow order_excursion" href="#orderExcursion">Бронировать</a>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

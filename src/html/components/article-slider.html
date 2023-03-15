@@ -1,0 +1,34 @@
+<section class="hotel mgt-150">
+  <div class="auto_bg"></div>
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Читайте</span>
+      <h2 class="title">Другие статьи</h2>
+    </div>
+  </div>
+  <div class="hotel_slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <div class="swiper-slide">
+          <div class="article">
+            <span class="article_label">`+context.arr[i].label+`</span>
+            <a href="`+context.arr[i].link+`">
+              <img class="article_img" src="`+context.arr[i].image+`">
+            </a>
+            <div class="article_info">
+              <div>
+                <div class="article_caption">`+context.arr[i].caption+`</div>
+                <div class="article_description short">`+context.arr[i].description+`</div>
+              </div>
+              <a class="article_link" href="`+context.arr[i].link+`">Читать дальше <i>→</i></a>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

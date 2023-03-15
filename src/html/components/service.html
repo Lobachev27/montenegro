@@ -1,0 +1,14 @@
+<div class="service">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="swiper-slide">
+        <a class="service_link" href="`+context.arr[i].link+`">
+          <img class="service_img" src="`+context.arr[i].image+`" alt="">
+          <div class="service_name">`+context.arr[i].name+`</div>
+        </a>
+      </div>
+      }
+    </div>
+  </div>
+</div>

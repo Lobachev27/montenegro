@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Тур Hotel Monte Cristo"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: true,
+    linkActive: 1,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/screen.html", {
+    context: {
+      image: './img/screen-1.jpg',
+      title: 'Тур Hotel Monte Cristo',
+      way: '<div class="page_way"><a class="page_way_link" href="./">Главная</a><span> — </span><a class="page_way_link" href="./tours.html">Туры</a><span> — </span><a class="page_way_link" href="./tours_city.html">Туры в Которе</a><span> — </span><p class="page_way_link">Тур Hotel Monte Cristo</p></div>',
+    }
+  })
+
+  <section class="filter_wrapper">
+    <div class="container">
+      <div class="filter shadow">
+        <h3 class="filter_name">Бронирование тура</h3>
+        <form class="filter_form col-four">
+          <input class="filter_input" name="name" type="text" placeholder="Введите имя" autocomplete="off" required>
+          <input class="filter_input" name="phone" type="text" placeholder="Введите телефон" autocomplete="off" required>
+          <input class="filter_input" name="e-mail" type="text" placeholder="Введите E-mail" autocomplete="off">
+          <button class="btn-bl" type="submit">Бронировать тур</button>
+          <!--<label class="subscription_confirm">
+            <input class="subscription_confirm_checked" type="checkbox" name="confirm">
+            <span class="subscription_confirm_checked-custom"></span>
+            <span class="subscription_confirm_label">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных.</span>
+          </label>-->
+          <label class="checkbox">
+            <input type="checkbox" name="confirm" required>
+            <div class="checkbox_text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных</div>
+          </label>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="info tour">
+    <div class="info_left">
+      <div class="indent"></div>
+      <div class="info_container">
+        <div class="title_box">
+          <span class="title_decor">Тур включает в себя</span>
+          <h2 class="title">Hotel Monte Cristo</h2>
+        </div>
+        <div class="tours_page_wrapper">
+          <div class="tours_page_row">
+            <div class="hotel_stars"><span></span></div>
+            <div class="tours_city_include">
+              <div class="tours_city_icon home"></div>
+              <div class="tours_city_icon plane"></div>
+              <div class="tours_city_icon bus"></div>
+              <div class="tours_city_icon spoon"></div>
+              <div class="tours_city_icon cross"></div>
+            </div>
+          </div>
+          <div class="tours_page_description">До пляжа можно дойти всего за 6 минут. Капитально отреставрированный отель Monte Cristo расположен
+            в здании XIII века, в прошлом принадлежавшем первому епископу Котора. К услугам гостей индивидуально
+          </div>
+          <h3 class="filter_name mg-0">Тур включает</h3>
+          <div class="tours_page_more">
+            <div class="tours_page_item days">6 дней</div>
+            <div class="tours_page_item home">Проживание</div>
+            <div class="tours_page_item people">2 взрослых</div>
+            <div class="tours_page_item plane">Авиаперелет</div>
+            <div class="tours_page_item seat">Двухместный номер</div>
+            <div class="tours_page_item cross">Страховка</div>
+            <div class="tours_page_item breakfast">Завтраки</div>
+            <div class="tours_page_item bus">Трансфер</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info_slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img class="info_img" src="./img/slide-6.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img class="info_img" src="./img/slide-7.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img class="info_img" src="./img/slide-6.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img class="info_img" src="./img/slide-7.jpg" alt="">
+          </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hotel_page">
+    <div class="container">
+      <div class="hotel_page_wrapper">
+        <div class="hotel_page_info">
+          <div class="hotel_page_block">
+            <h3 class="filter_name">Отель предлагает</h3>
+            <div class="hotel_page_list">
+              <div class="hotel_page_item bar">Круглосуточный бар</div>
+              <div class="hotel_page_item wi-fi">Бесплатный WI-FI</div>
+              <div class="hotel_page_item shop">Мини-рынок и магазины</div>
+              <div class="hotel_page_item restaurant">Ресторан</div>
+              <div class="hotel_page_item garage">Гараж на 24 места</div>
+              <div class="hotel_page_item children">Детская игровая комната</div>
+            </div>
+          </div>
+          <div class="hotel_page_extra">
+            <div class="hotel_page_block">
+              <h3 class="filter_name">Информация</h3>
+              <div class="hotel_page_description">
+                <p>Регистрация заезда: с 12:00</p>
+                <p>Регистрация отъезда: до 08:00-10:00</p>
+              </div>
+            </div>
+            <div class="hotel_page_block">
+              <h3 class="filter_name">Расположение</h3>
+              <div class="hotel_page_description">
+                <p>Obala Iva Novakovica, 85355 Сутоморе, Черногория</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="map_hmc" class="contacts_map mg-0 w-100"></div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/tours-city.html", {
+    context: {
+      arr: [
+        {
+          image: './img/hotel-monte-cristo.jpg',
+          caption: 'Hotel Monte Cristo',
+          stars: '',
+          include: '<div class="tours_city_include"><div class="tours_city_icon home"></div><div class="tours_city_icon plane"></div><div class="tours_city_icon bus"></div><div class="tours_city_icon spoon"></div><div class="tours_city_icon cross"></div></div>',
+          more: '<div class="tours_city_more"><div class="tours_city_item">6 дней</div><div class="tours_city_item">двухместный</div><div class="tours_city_item">2 взрослых</div><div class="tours_city_item">завтраки</div></div>',
+          price: '48 699 ₽',
+          link: './tours_page.html',
+        },
+        {
+          image: './img/hotel-monte-cristo.jpg',
+          caption: 'Hotel Monte Cristo',
+          stars: '',
+          include: '<div class="tours_city_include"><div class="tours_city_icon home"></div><div class="tours_city_icon plane"></div><div class="tours_city_icon bus"></div><div class="tours_city_icon spoon"></div><div class="tours_city_icon cross"></div></div>',
+          more: '<div class="tours_city_more"><div class="tours_city_item">6 дней</div><div class="tours_city_item">двухместный</div><div class="tours_city_item">2 взрослых</div><div class="tours_city_item">завтраки</div></div>',
+          price: '48 699 ₽',
+          link: './tours_page.html',
+        },
+        {
+          image: './img/hotel-monte-cristo.jpg',
+          caption: 'Hotel Monte Cristo',
+          stars: '',
+          include: '<div class="tours_city_include"><div class="tours_city_icon home"></div><div class="tours_city_icon plane"></div><div class="tours_city_icon bus"></div><div class="tours_city_icon spoon"></div><div class="tours_city_icon cross"></div></div>',
+          more: '<div class="tours_city_more"><div class="tours_city_item">6 дней</div><div class="tours_city_item">двухместный</div><div class="tours_city_item">2 взрослых</div><div class="tours_city_item">завтраки</div></div>',
+          price: '48 699 ₽',
+          link: './tours_page.html',
+        },
+        {
+          image: './img/hotel-monte-cristo.jpg',
+          caption: 'Hotel Monte Cristo',
+          stars: '',
+          include: '<div class="tours_city_include"><div class="tours_city_icon home"></div><div class="tours_city_icon plane"></div><div class="tours_city_icon bus"></div><div class="tours_city_icon spoon"></div><div class="tours_city_icon cross"></div></div>',
+          more: '<div class="tours_city_more"><div class="tours_city_item">6 дней</div><div class="tours_city_item">двухместный</div><div class="tours_city_item">2 взрослых</div><div class="tours_city_item">завтраки</div></div>',
+          price: '48 699 ₽',
+          link: './tours_page.html',
+        },
+        {
+          image: './img/hotel-monte-cristo.jpg',
+          caption: 'Hotel Monte Cristo',
+          stars: '',
+          include: '<div class="tours_city_include"><div class="tours_city_icon home"></div><div class="tours_city_icon plane"></div><div class="tours_city_icon bus"></div><div class="tours_city_icon spoon"></div><div class="tours_city_icon cross"></div></div>',
+          more: '<div class="tours_city_more"><div class="tours_city_item">6 дней</div><div class="tours_city_item">двухместный</div><div class="tours_city_item">2 взрослых</div><div class="tours_city_item">завтраки</div></div>',
+          price: '48 699 ₽',
+          link: './tours_page.html',
+        },
+        {
+          image: './img/hotel-monte-cristo.jpg',
+          caption: 'Hotel Monte Cristo',
+          stars: '',
+          include: '<div class="tours_city_include"><div class="tours_city_icon home"></div><div class="tours_city_icon plane"></div><div class="tours_city_icon bus"></div><div class="tours_city_icon spoon"></div><div class="tours_city_icon cross"></div></div>',
+          more: '<div class="tours_city_more"><div class="tours_city_item">6 дней</div><div class="tours_city_item">двухместный</div><div class="tours_city_item">2 взрослых</div><div class="tours_city_item">завтраки</div></div>',
+          price: '48 699 ₽',
+          link: './tours_page.html',
+        },
+      ]
+    }
+  })
+
+  @@include("./components/directions-slider.html", {
+    context: {
+      arr: [
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+      ]
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

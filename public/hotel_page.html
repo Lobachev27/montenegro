@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Apart Hotel Sea Fort</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./css/favicon.ico" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-desktop">
+          <div class="header_logo">
+            <a class="header_logo_link" href="./">
+              <img
+                class="header_logo_img"
+                src="./img/logo-white.png"
+                alt="Montenegro Tours"
+                title="Montenegro Tours"
+              />
+            </a>
+          </div>
+          <nav class="header_nav">
+            <a class="header_nav_item txt-white" href="./tours.html">Туры</a>
+            <a class="header_nav_item txt-white active" href="./hotel.html"
+              >Отели</a
+            >
+            <!--<a class="header_nav_item txt-white " href="./excursion-list.html">Экскурсии</a>-->
+            <a class="header_nav_item txt-white" href="./auto.html"
+              >Аренда автомобилей</a
+            >
+            <a class="header_nav_item txt-white" href="./stock.html">Акции</a>
+            <a class="header_nav_item txt-white" href="./article.html"
+              >Полезное</a
+            >
+            <a class="header_nav_item txt-white" href="./about_us.html"
+              >О нас</a
+            >
+            <a class="header_nav_item txt-white" href="./contacts.html"
+              >Контакты</a
+            >
+          </nav>
+          <div class="header_burger white"></div>
+          <div class="header_phone">
+            <a class="header_phone_number txt-white" href="tel:+74991305509"
+              >+7 (499) 130 55 09</a
+            >
+            <a class="btn-tr txt-white call_me" href="#callMe"
+              >Заказать звонок</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-mobile">
+      <div class="header_cross"></div>
+      <nav class="header_nav mobile">
+        <a class="header_nav_item mobile" href="./tours.html">Туры</a>
+        <a class="header_nav_item mobile active" href="./hotel.html">Отели</a>
+        <!--<a class="header_nav_item mobile " href="./excursion-list.html">Экскурсии</a>-->
+        <a class="header_nav_item mobile" href="./auto.html"
+          >Аренда автомобилей</a
+        >
+        <a class="header_nav_item mobile" href="./stock.html">Акции</a>
+        <a class="header_nav_item mobile" href="./article.html">Полезное</a>
+        <a class="header_nav_item mobile" href="./about_us.html">О нас</a>
+        <a class="header_nav_item mobile" href="./contacts.html">Контакты</a>
+      </nav>
+      <div class="header_phone mobile">
+        <a class="header_phone_number" href="tel:+74991305509"
+          >+7 (499) 130 55 09</a
+        >
+        <a class="btn-tr call_me" href="#callMe">Заказать звонок</a>
+      </div>
+      <a class="header_mail" href="mailto:info@montenegro-tours.ru"
+        >info@montenegro-tours.ru</a
+      >
+      <div class="header_address">
+        108811, г.Москва, поселение Московский, 22-ой км. Киевского шоссе,
+        домовладение 4
+      </div>
+    </div>
+
+    <main class="main">
+      <section class="screen">
+        <img class="screen_img" src="./img/screen-3.jpg" />
+        <div class="screen_filter"></div>
+        <div class="screen_mask"></div>
+        <div class="page_title_box">
+          <div class="container">
+            <div class="page_title_wrapper">
+              <h1 class="title title-page">Apart Hotel Sea Fort</h1>
+              <div class="page_way">
+                <a class="page_way_link" href="./">Главная</a><span> — </span
+                ><a class="page_way_link" href="./hotel.html">Каталог отелей</a
+                ><span> — </span>
+                <p class="page_way_link">Apart Hotel Sea Fort</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="filter_wrapper">
+        <div class="container">
+          <div class="filter shadow">
+            <h3 class="filter_name">Бронирование отеля</h3>
+            <form class="filter_form input-eight">
+              <div class="filter_calendar_wrapper">
+                <input
+                  id="datepicker2"
+                  class="filter_calendar"
+                  type="text"
+                  placeholder="Дата заезда"
+                  autocomplete="off"
+                />
+                <label for="datepicker2">&nbsp;</label>
+              </div>
+              <div class="filter_calendar_wrapper">
+                <input
+                  id="datepicker3"
+                  class="filter_calendar"
+                  type="text"
+                  placeholder="Дата выезда"
+                  autocomplete="off"
+                />
+                <label for="datepicker3">&nbsp;</label>
+              </div>
+              <div class="filter_select">
+                <div class="filter_select_main">Количество взрослых</div>
+                <div class="filter_select_list">
+                  <div class="filter_select_item">1</div>
+                  <div class="filter_select_item">2</div>
+                  <div class="filter_select_item">3</div>
+                  <div class="filter_select_item">4</div>
+                  <div class="filter_select_item">5</div>
+                  <div class="filter_select_item">6</div>
+                  <div class="filter_select_item">7</div>
+                  <div class="filter_select_item">8</div>
+                </div>
+              </div>
+              <div class="filter_select">
+                <div class="filter_select_main">Количество детей</div>
+                <div class="filter_select_list">
+                  <div class="filter_select_item">0</div>
+                  <div class="filter_select_item">1</div>
+                  <div class="filter_select_item">2</div>
+                  <div class="filter_select_item">3</div>
+                  <div class="filter_select_item">4</div>
+                  <div class="filter_select_item">5</div>
+                  <div class="filter_select_item">6</div>
+                  <div class="filter_select_item">7</div>
+                  <div class="filter_select_item">8</div>
+                </div>
+              </div>
+              <input
+                class="filter_input"
+                name="name"
+                type="text"
+                placeholder="Введите имя"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="filter_input"
+                name="phone"
+                type="text"
+                placeholder="Введите телефон"
+                autocomplete="off"
+                required
+              />
+              <input
+                class="filter_input"
+                name="e-mail"
+                type="text"
+                placeholder="Введите E-mail"
+                autocomplete="off"
+              />
+              <button class="btn-bl" type="submit">Бронировать отель</button>
+              <!--<label class="subscription_confirm">
+            <input class="subscription_confirm_checked" type="checkbox" name="confirm">
+            <span class="subscription_confirm_checked-custom"></span>
+            <span class="subscription_confirm_label">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных.</span>
+          </label>-->
+              <label class="checkbox">
+                <input type="checkbox" name="confirm" required />
+                <div class="checkbox_text">
+                  Я согласен с политикой конфиденциальности и даю согласие на
+                  обработку персональных данных
+                </div>
+              </label>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="info tour">
+        <div class="info_left">
+          <div class="indent"></div>
+          <div class="info_container">
+            <div class="title_box">
+              <span class="title_decor">Проведите отпуск в</span>
+              <h2 class="title">Apart Hotel Sea Fort</h2>
+            </div>
+            <div class="info_box extra">
+              <div class="info_description extra">
+                <p>
+                  Отель расположен в курортном городе Сутоморе, который известен
+                  своими красивыми песчано-галичными пляжами протяженностью
+                  более 2 км.
+                </p>
+                <p>
+                  До пляжа можно дойти всего за пару минут. Сутоморе
+                  располагается между городами Петровац и Бар. Маленький город
+                  Сутоморе означает в переводе «только море».
+                </p>
+                <p>
+                  Здесь вы найдете величественные скалы, сосновые и кипарисовые
+                  леса, золотистый песок. Город отличается особым воздухом,
+                  пропитанным ароматом хвои и морского бриза.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info_slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="info_img" src="./img/slide-8.jpg" alt="" />
+              </div>
+
+              <div class="swiper-slide">
+                <img class="info_img" src="./img/slide-9.jpg" alt="" />
+              </div>
+
+              <div class="swiper-slide">
+                <img class="info_img" src="./img/slide-8.jpg" alt="" />
+              </div>
+
+              <div class="swiper-slide">
+                <img class="info_img" src="./img/slide-9.jpg" alt="" />
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hotel_page">
+        <div class="container">
+          <div class="hotel_page_wrapper">
+            <div class="hotel_page_info">
+              <div class="hotel_page_block">
+                <h3 class="filter_name">Отель предлагает</h3>
+                <div class="hotel_page_list">
+                  <div class="hotel_page_item bar">Круглосуточный бар</div>
+                  <div class="hotel_page_item wi-fi">Бесплатный WI-FI</div>
+                  <div class="hotel_page_item shop">Мини-рынок и магазины</div>
+                  <div class="hotel_page_item restaurant">Ресторан</div>
+                  <div class="hotel_page_item garage">Гараж на 24 места</div>
+                  <div class="hotel_page_item children">
+                    Детская игровая комната
+                  </div>
+                </div>
+              </div>
+              <div class="hotel_page_extra">
+                <div class="hotel_page_block">
+                  <h3 class="filter_name">Информация</h3>
+                  <div class="hotel_page_description">
+                    <p>Регистрация заезда: с 12:00</p>
+                    <p>Регистрация отъезда: до 08:00-10:00</p>
+                  </div>
+                </div>
+                <div class="hotel_page_block">
+                  <h3 class="filter_name">Расположение</h3>
+                  <div class="hotel_page_description">
+                    <p>Obala Iva Novakovica, 85355 Сутоморе, Черногория</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="map_ahsf" class="contacts_map mg-0 w-100"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="auto">
+        <div class="auto_bg"></div>
+        <div class="container">
+          <div class="title_box">
+            <span class="title_decor">Не забудте посетить</span>
+            <h2 class="title">Экскурсии в Которе</h2>
+          </div>
+          <div class="directions_wrapper all">
+            <div class="excursion">
+              <img class="excursion_img" src="./img/excursion.jpg" />
+              <div class="excursion_filter"></div>
+              <div class="excursion_label">Экскурсии</div>
+              <div class="excursion_caption">Бока-Которская бухта</div>
+              <div class="excursion_description">
+                Бока-Которская бухта – «чудо природы», «самый южный каньон»,
+                «самый южный фьорд», «удобнейшая гавань Европы». Именно так
+                называют это место. Ну что ж, начинаем с города Котор.
+              </div>
+              <div class="excursion_more">
+                <div class="excursion_price">10 000 ₽</div>
+                <a
+                  class="btn-or request no-shadow order_excursion"
+                  href="#orderExcursion"
+                  >Бронировать</a
+                >
+              </div>
+            </div>
+
+            <div class="excursion">
+              <img class="excursion_img" src="./img/excursion.jpg" />
+              <div class="excursion_filter"></div>
+              <div class="excursion_label">Экскурсии</div>
+              <div class="excursion_caption">Бока-Которская бухта</div>
+              <div class="excursion_description">
+                Бока-Которская бухта – «чудо природы», «самый южный каньон»,
+                «самый южный фьорд», «удобнейшая гавань Европы». Именно так
+                называют это место. Ну что ж, начинаем с города Котор.
+              </div>
+              <div class="excursion_more">
+                <div class="excursion_price">10 000 ₽</div>
+                <a
+                  class="btn-or request no-shadow order_excursion"
+                  href="#orderExcursion"
+                  >Бронировать</a
+                >
+              </div>
+            </div>
+
+            <div class="excursion">
+              <img class="excursion_img" src="./img/excursion.jpg" />
+              <div class="excursion_filter"></div>
+              <div class="excursion_label">Экскурсии</div>
+              <div class="excursion_caption">Бока-Которская бухта</div>
+              <div class="excursion_description">
+                Бока-Которская бухта – «чудо природы», «самый южный каньон»,
+                «самый южный фьорд», «удобнейшая гавань Европы». Именно так
+                называют это место. Ну что ж, начинаем с города Котор.
+              </div>
+              <div class="excursion_more">
+                <div class="excursion_price">10 000 ₽</div>
+                <a
+                  class="btn-or request no-shadow order_excursion"
+                  href="#orderExcursion"
+                  >Бронировать</a
+                >
+              </div>
+            </div>
+
+            <div class="excursion">
+              <img class="excursion_img" src="./img/excursion.jpg" />
+              <div class="excursion_filter"></div>
+              <div class="excursion_label">Экскурсии</div>
+              <div class="excursion_caption">Бока-Которская бухта</div>
+              <div class="excursion_description">
+                Бока-Которская бухта – «чудо природы», «самый южный каньон»,
+                «самый южный фьорд», «удобнейшая гавань Европы». Именно так
+                называют это место. Ну что ж, начинаем с города Котор.
+              </div>
+              <div class="excursion_more">
+                <div class="excursion_price">10 000 ₽</div>
+                <a
+                  class="btn-or request no-shadow order_excursion"
+                  href="#orderExcursion"
+                  >Бронировать</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hotel">
+        <div class="container">
+          <div class="title_box">
+            <span class="title_decor">Бронируйте лучшие</span>
+            <h2 class="title">Отели Черногории</h2>
+          </div>
+        </div>
+        <div class="hotel_slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hotel_box">
+                  <a href="./hotel_page.html">
+                    <img class="hotel_img" src="./img/hotel-monte-cristo.jpg" />
+                  </a>
+                  <div class="hotel_info">
+                    <div class="hotel_name">Hotel Monte Cristo</div>
+                    <div class="hotel_stars"></div>
+                    <div class="hotel_description">
+                      Этот вариант находится в самом сердце города Котор. До
+                      пляжа можно дойти всего за 6 минут.
+                    </div>
+                    <div class="hotel_extra">
+                      <div class="hotel_price">от 5 000 ₽</div>
+                      <a class="btn-or request" href="./hotel_page.html"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="hotel_box">
+                  <a href="./hotel_page.html">
+                    <img class="hotel_img" src="./img/hotel-monte-cristo.jpg" />
+                  </a>
+                  <div class="hotel_info">
+                    <div class="hotel_name">Hotel Monte Cristo</div>
+                    <div class="hotel_stars"></div>
+                    <div class="hotel_description">
+                      Этот вариант находится в самом сердце города Котор. До
+                      пляжа можно дойти всего за 6 минут.
+                    </div>
+                    <div class="hotel_extra">
+                      <div class="hotel_price">от 5 000 ₽</div>
+                      <a class="btn-or request" href="./hotel_page.html"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="hotel_box">
+                  <a href="./hotel_page.html">
+                    <img class="hotel_img" src="./img/hotel-monte-cristo.jpg" />
+                  </a>
+                  <div class="hotel_info">
+                    <div class="hotel_name">Hotel Monte Cristo</div>
+                    <div class="hotel_stars"></div>
+                    <div class="hotel_description">
+                      Этот вариант находится в самом сердце города Котор. До
+                      пляжа можно дойти всего за 6 минут.
+                    </div>
+                    <div class="hotel_extra">
+                      <div class="hotel_price">от 5 000 ₽</div>
+                      <a class="btn-or request" href="./hotel_page.html"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="hotel_box">
+                  <a href="./hotel_page.html">
+                    <img class="hotel_img" src="./img/hotel-monte-cristo.jpg" />
+                  </a>
+                  <div class="hotel_info">
+                    <div class="hotel_name">Hotel Monte Cristo</div>
+                    <div class="hotel_stars"></div>
+                    <div class="hotel_description">
+                      Этот вариант находится в самом сердце города Котор. До
+                      пляжа можно дойти всего за 6 минут.
+                    </div>
+                    <div class="hotel_extra">
+                      <div class="hotel_price">от 5 000 ₽</div>
+                      <a class="btn-or request" href="./hotel_page.html"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="hotel_box">
+                  <a href="./hotel_page.html">
+                    <img class="hotel_img" src="./img/hotel-monte-cristo.jpg" />
+                  </a>
+                  <div class="hotel_info">
+                    <div class="hotel_name">Hotel Monte Cristo</div>
+                    <div class="hotel_stars"></div>
+                    <div class="hotel_description">
+                      Этот вариант находится в самом сердце города Котор. До
+                      пляжа можно дойти всего за 6 минут.
+                    </div>
+                    <div class="hotel_extra">
+                      <div class="hotel_price">от 5 000 ₽</div>
+                      <a class="btn-or request" href="./hotel_page.html"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="hotel_box">
+                  <a href="./hotel_page.html">
+                    <img class="hotel_img" src="./img/hotel-monte-cristo.jpg" />
+                  </a>
+                  <div class="hotel_info">
+                    <div class="hotel_name">Hotel Monte Cristo</div>
+                    <div class="hotel_stars"></div>
+                    <div class="hotel_description">
+                      Этот вариант находится в самом сердце города Котор. До
+                      пляжа можно дойти всего за 6 минут.
+                    </div>
+                    <div class="hotel_extra">
+                      <div class="hotel_price">от 5 000 ₽</div>
+                      <a class="btn-or request" href="./hotel_page.html"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="hotel_box">
+                  <a href="./hotel_page.html">
+                    <img class="hotel_img" src="./img/hotel-monte-cristo.jpg" />
+                  </a>
+                  <div class="hotel_info">
+                    <div class="hotel_name">Hotel Monte Cristo</div>
+                    <div class="hotel_stars"></div>
+                    <div class="hotel_description">
+                      Этот вариант находится в самом сердце города Котор. До
+                      пляжа можно дойти всего за 6 минут.
+                    </div>
+                    <div class="hotel_extra">
+                      <div class="hotel_price">от 5 000 ₽</div>
+                      <a class="btn-or request" href="./hotel_page.html"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="hotel_box">
+                  <a href="./hotel_page.html">
+                    <img class="hotel_img" src="./img/hotel-monte-cristo.jpg" />
+                  </a>
+                  <div class="hotel_info">
+                    <div class="hotel_name">Hotel Monte Cristo</div>
+                    <div class="hotel_stars"></div>
+                    <div class="hotel_description">
+                      Этот вариант находится в самом сердце города Котор. До
+                      пляжа можно дойти всего за 6 минут.
+                    </div>
+                    <div class="hotel_extra">
+                      <div class="hotel_price">от 5 000 ₽</div>
+                      <a class="btn-or request" href="./hotel_page.html"
+                        >Подробнее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="directions mgt-120">
+        <div class="container">
+          <div class="title_box">
+            <span class="title_decor">Самые популярные</span>
+            <h2 class="title">Направления туров</h2>
+          </div>
+        </div>
+        <div class="directions_slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="directions_box block">
+                  <img class="directions_img" src="./img/directions-5.jpg" />
+                  <div class="directions_mask"></div>
+                  <div class="directions_info">
+                    <div class="directions_info_top">
+                      <div class="directions_name">Петровац</div>
+                      <div class="directions_amount">Доступно 5 туров</div>
+                    </div>
+                    <div class="directions_info_bottom">
+                      <div class="directions_price">от 20 000 ₽</div>
+                    </div>
+                  </div>
+                  <a class="directions_link" href="./tours_city.html"></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="directions_box block">
+                  <img class="directions_img" src="./img/directions-5.jpg" />
+                  <div class="directions_mask"></div>
+                  <div class="directions_info">
+                    <div class="directions_info_top">
+                      <div class="directions_name">Петровац</div>
+                      <div class="directions_amount">Доступно 5 туров</div>
+                    </div>
+                    <div class="directions_info_bottom">
+                      <div class="directions_price">от 20 000 ₽</div>
+                    </div>
+                  </div>
+                  <a class="directions_link" href="./tours_city.html"></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="directions_box block">
+                  <img class="directions_img" src="./img/directions-5.jpg" />
+                  <div class="directions_mask"></div>
+                  <div class="directions_info">
+                    <div class="directions_info_top">
+                      <div class="directions_name">Петровац</div>
+                      <div class="directions_amount">Доступно 5 туров</div>
+                    </div>
+                    <div class="directions_info_bottom">
+                      <div class="directions_price">от 20 000 ₽</div>
+                    </div>
+                  </div>
+                  <a class="directions_link" href="./tours_city.html"></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="directions_box block">
+                  <img class="directions_img" src="./img/directions-5.jpg" />
+                  <div class="directions_mask"></div>
+                  <div class="directions_info">
+                    <div class="directions_info_top">
+                      <div class="directions_name">Петровац</div>
+                      <div class="directions_amount">Доступно 5 туров</div>
+                    </div>
+                    <div class="directions_info_bottom">
+                      <div class="directions_price">от 20 000 ₽</div>
+                    </div>
+                  </div>
+                  <a class="directions_link" href="./tours_city.html"></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="directions_box block">
+                  <img class="directions_img" src="./img/directions-5.jpg" />
+                  <div class="directions_mask"></div>
+                  <div class="directions_info">
+                    <div class="directions_info_top">
+                      <div class="directions_name">Петровац</div>
+                      <div class="directions_amount">Доступно 5 туров</div>
+                    </div>
+                    <div class="directions_info_bottom">
+                      <div class="directions_price">от 20 000 ₽</div>
+                    </div>
+                  </div>
+                  <a class="directions_link" href="./tours_city.html"></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="directions_box block">
+                  <img class="directions_img" src="./img/directions-5.jpg" />
+                  <div class="directions_mask"></div>
+                  <div class="directions_info">
+                    <div class="directions_info_top">
+                      <div class="directions_name">Петровац</div>
+                      <div class="directions_amount">Доступно 5 туров</div>
+                    </div>
+                    <div class="directions_info_bottom">
+                      <div class="directions_price">от 20 000 ₽</div>
+                    </div>
+                  </div>
+                  <a class="directions_link" href="./tours_city.html"></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="directions_box block">
+                  <img class="directions_img" src="./img/directions-5.jpg" />
+                  <div class="directions_mask"></div>
+                  <div class="directions_info">
+                    <div class="directions_info_top">
+                      <div class="directions_name">Петровац</div>
+                      <div class="directions_amount">Доступно 5 туров</div>
+                    </div>
+                    <div class="directions_info_bottom">
+                      <div class="directions_price">от 20 000 ₽</div>
+                    </div>
+                  </div>
+                  <a class="directions_link" href="./tours_city.html"></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="directions_box block">
+                  <img class="directions_img" src="./img/directions-5.jpg" />
+                  <div class="directions_mask"></div>
+                  <div class="directions_info">
+                    <div class="directions_info_top">
+                      <div class="directions_name">Петровац</div>
+                      <div class="directions_amount">Доступно 5 туров</div>
+                    </div>
+                    <div class="directions_info_bottom">
+                      <div class="directions_price">от 20 000 ₽</div>
+                    </div>
+                  </div>
+                  <a class="directions_link" href="./tours_city.html"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_wrapper">
+          <div class="footer_left">
+            <div class="footer_logo">
+              <a class="footer_logo_link" href=".//">
+                <img
+                  class="footer_logo_img"
+                  src="./img/logo.png"
+                  alt="Montenegro Tours"
+                  title="Montenegro Tours"
+                />
+              </a>
+            </div>
+            <div class="footer_description">
+              Туристическое агенство. Организация отдыха на курортах Черногории.
+            </div>
+            <div class="footer_copyright">© 2017-2018. All Right reserved</div>
+          </div>
+          <nav class="footer_nav">
+            <div class="footer_nav_name one">Меню</div>
+            <a class="footer_nav_item" href="./tours.html">Туры</a>
+            <a class="footer_nav_item" href="./hotel.html">Отели</a>
+            <!--<a class="footer_nav_item" href="./excursion-list.html">Экскурсии</a>-->
+            <a class="footer_nav_item" href="./auto.html">Аренда автомобилей</a>
+            <a class="footer_nav_item" href="./stock.html">Акции</a>
+            <a class="footer_nav_item" href="./article.html">Полезное</a>
+            <a class="footer_nav_item" href="./about_us.html">О нас</a>
+            <a class="footer_nav_item" href="./contacts.html">Контакты</a>
+          </nav>
+          <nav class="footer_nav">
+            <div class="footer_nav_name two">Услуги</div>
+            <a class="footer_nav_item" href="./tours.html">Туры по стране</a>
+            <a class="footer_nav_item" href="./hotel.html"
+              >Бронирование отелей</a
+            >
+            <a class="footer_nav_item" href="./auto.html">Аренда автомобилей</a>
+            <!--<a class="footer_nav_item" href="./excursion-list.html">Экскурсии на природу</a>-->
+            <a class="footer_nav_item" href="./corporate.html"
+              >Корпоративный отдых</a
+            >
+          </nav>
+          <nav class="footer_nav">
+            <div class="footer_nav_name three">Туры</div>
+            <a class="footer_nav_item" href="./tours_city.html">Котор</a>
+            <a class="footer_nav_item" href="./tours_city.html">Будва</a>
+            <a class="footer_nav_item" href="./tours_city.html">Херцег-Нови</a>
+            <a class="footer_nav_item" href="./tours_city.html">Петровац</a>
+            <a class="footer_nav_item" href="./tours_city.html">Бар</a>
+            <a class="footer_nav_item" href="./tours_city.html">Бечичи</a>
+            <a class="footer_nav_item" href="./tours_city.html">Тиват</a>
+          </nav>
+          <div class="footer_right">
+            <div class="footer_phone">
+              <a class="footer_phone_number" href="tel:+74991305509"
+                >+7 (499) 130 55 09</a
+              >
+              <a class="btn-tr call_me" href="#callMe">Заказать звонок</a>
+            </div>
+            <a class="footer_mail" href="mailto:info@montenegro-tours.ru"
+              >info@montenegro-tours.ru</a
+            >
+            <div class="footer_address">
+              108811, г.Москва, поселение Московский, 22-ой км. Киевского шоссе,
+              домовладение 4
+            </div>
+            <div class="footer_develop">
+              Разработчик сайта:
+              <a class="footer_link" href="http://champer.ru/">Champer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="callMe" class="modalDialog">
+      <div>
+        <div title="Закрыть" class="close"></div>
+        <div class="application_caption">Обратный звонок</div>
+        <form class="application_form">
+          <input
+            class="application_input"
+            name="name"
+            type="text"
+            placeholder="Введите имя"
+            autocomplete="off"
+            required
+          />
+          <input
+            class="application_input"
+            name="phone"
+            type="text"
+            placeholder="Введите телефон"
+            autocomplete="off"
+            required
+          />
+          <button class="btn-or" type="submit">Заказать звонок</button>
+          <!--<label class="subscription_confirm mgt-30">
+        <input class="subscription_confirm_checked" type="checkbox" name="confirm">
+        <span class="subscription_confirm_checked-custom"></span>
+        <span class="subscription_confirm_label">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных.</span>
+      </label>-->
+          <label class="checkbox">
+            <input type="checkbox" name="confirm" required />
+            <div class="checkbox_text">
+              Я согласен с политикой конфиденциальности и даю согласие на
+              обработку персональных данных
+            </div>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div id="rentAuto" class="modalDialog">
+      <div>
+        <div title="Закрыть" class="close"></div>
+        <div class="application_caption">Заявка на аренду</div>
+        <div class="application_description">
+          Автомобиль Opel Astra Cabrio 2008
+        </div>
+        <form class="application_form">
+          <input
+            class="application_input"
+            name="name"
+            type="text"
+            placeholder="Введите имя"
+            autocomplete="off"
+            required
+          />
+          <input
+            class="application_input"
+            name="phone"
+            type="text"
+            placeholder="Введите телефон"
+            autocomplete="off"
+            required
+          />
+          <input
+            class="application_input"
+            name="e-mail"
+            type="text"
+            placeholder="Введите e-mail"
+            autocomplete="off"
+          />
+          <textarea
+            class="application_comment"
+            name="comment"
+            placeholder="Комментарий к аренде"
+          ></textarea>
+          <button class="btn-or" type="submit">Отправить заявку</button>
+          <!--<label class="subscription_confirm mgt-30">
+        <input class="subscription_confirm_checked" type="checkbox" name="confirm">
+        <span class="subscription_confirm_checked-custom"></span>
+        <span class="subscription_confirm_label">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных.</span>
+      </label>-->
+          <label class="checkbox">
+            <input type="checkbox" name="confirm" required />
+            <div class="checkbox_text">
+              Я согласен с политикой конфиденциальности и даю согласие на
+              обработку персональных данных
+            </div>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div id="orderExcursion" class="modalDialog">
+      <div>
+        <div title="Закрыть" class="close"></div>
+        <div class="application_caption">Заявка на бронирование</div>
+        <div class="application_description">
+          Экскурсия в Бока-Которскую Бухту
+        </div>
+        <form class="application_form">
+          <input
+            class="application_input"
+            name="name"
+            type="text"
+            placeholder="Введите имя"
+            autocomplete="off"
+            required
+          />
+          <input
+            class="application_input"
+            name="phone"
+            type="text"
+            placeholder="Введите телефон"
+            autocomplete="off"
+            required
+          />
+          <input
+            class="application_input"
+            name="e-mail"
+            type="text"
+            placeholder="Введите e-mail"
+            autocomplete="off"
+          />
+          <textarea
+            class="application_comment"
+            name="comment"
+            placeholder="Комментарий к бронированию"
+          ></textarea>
+          <button class="btn-or" type="submit">Отправить заявку</button>
+          <!--<label class="subscription_confirm mgt-30">
+        <input class="subscription_confirm_checked" type="checkbox" name="confirm">
+        <span class="subscription_confirm_checked-custom"></span>
+        <span class="subscription_confirm_label">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных.</span>
+      </label>-->
+          <label class="checkbox">
+            <input type="checkbox" name="confirm" required />
+            <div class="checkbox_text">
+              Я согласен с политикой конфиденциальности и даю согласие на
+              обработку персональных данных
+            </div>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <div id="resultModal" class="modalDialog">
+      <div>
+        <div title="Закрыть" class="close"></div>
+        <img class="application_img" src="./img/accepted.png" />
+        <div class="application_caption">Ваша заявка принята</div>
+        <div class="application_description">
+          Наши менеджеры скоро свяжутся с вами
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzogucrmxIEx6uGt9MvfyIyBhD-L1aX6I"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

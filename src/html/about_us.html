@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "О нас"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: true,
+    linkActive: 7,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/screen.html", {
+    context: {
+      image: './img/screen-1.jpg',
+      title: 'О нас',
+      way: '<div class="page_way"><a class="page_way_link" href="./">Главная</a><span> — </span><div class="page_way_link">О нас</div></div>',
+    }
+  })
+
+  @@include("./components/info-about.html")
+
+  <section class="slogan">
+    <h3 class="slogan_text">Наша цель — предоставление надежных туристических услуг</h3>
+  </section>
+
+  <section class="about_us">
+    <div class="container">
+      <div class="about_us_wrapper">
+        <div class="about_us_left">
+          <img class="about_us_img" src="./img/slide-5.jpg">
+        </div>
+        <div class="about_us_right">
+          <div class="title_box">
+            <h2 class="title">Отдых в Черногории</h2>
+          </div>
+          <div class="info_box extra">
+            <div class="info_description extra">Это очень качественный и доступный отдых. Гостеприимная страна с невероятно вкусной национальной кухней, приветливыми жителями.</div>
+            <div class="info_description extra">Черногория сочетмает в себе как красивые пляжи
+              и комфортабельные отели, так и дикую нетронутую природу, чистый воздух, лазурные реки, горные озера, национальные парки, монастыри и, безусловно, море. Мягкий климат, запах сосен и солнце. </div>
+            <div class="info_description imp extra">Вы сразу влюбитесь в эту страну</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

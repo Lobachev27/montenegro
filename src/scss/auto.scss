@@ -1,0 +1,380 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.auto{
+  position: relative;
+  margin-top: 220px;
+  margin-bottom: 100px;
+  z-index: 2;
+  @media screen and ($desktop1) {
+    margin-top: 180px;
+  }
+  @media screen and ($tablet2) {
+    margin-top: 120px;
+  }
+  @media screen and ($mobile3) {
+    margin-top: 80px;
+  }
+
+  &_bg{
+    position: absolute;
+    background: url("../img/ellipse-blue-2.png") no-repeat 0px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: calc(110% + 120px);
+    top: -120px;
+    z-index: -1;
+    @media screen and ($desktop1) {
+      height: calc(107% + 120px);
+      top: -100px;
+    }
+    @media screen and ($tablet2) {
+      height: calc(105% + 120px);
+      top: -60px;
+    }
+    @media screen and ($tablet1) {
+      height: calc(100% + 120px);
+    }
+    @media screen and ($mobile3) {
+      top: -40px;
+    }
+
+    &_two{
+      position: absolute;
+      background: url("../img/arenda-text.png") no-repeat 0px;
+      background-size: cover;
+      width: 1319px;
+      height: 247px;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      @media screen and ($tablet2) {
+        width: 100%;
+        height: 18vw;
+      }
+      @media screen and ($tablet1) {
+        display: none;
+      }
+    }
+  }
+
+  &_wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 45px;
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    @media screen and ($desktop1) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 30px;
+      width: 100%;
+      margin-top: 90px;
+    }
+    @media screen and ($tablet2) {
+      grid-gap: 20px;
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and ($mobile5) {
+      margin-top: 50px;
+    }
+    @media screen and ($mobile3) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &_box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 5px 20px $shadow-btn-main-two;
+    @media screen and ($desktop1) {
+      grid-template-columns: auto;
+      grid-template-rows: 9fr 11fr;
+    }
+    @media screen and (max-width: 400px) {
+      grid-template-rows: 9fr 11fr;
+    }
+  }
+
+  &_img{
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px ;
+    @media screen and ($desktop1) {
+      border-radius: 10px 10px 0 0 ;
+    }
+  }
+
+  &_info{
+    display: grid;
+    padding: 30px;
+    @media screen and ($tablet2) {
+      padding: 30px 25px;
+    }
+    @media screen and ($tablet1) {
+      padding: 30px;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px 15px;
+    }
+    @media screen and ($mobile3) {
+      padding: 20px;
+    }
+  }
+
+  &_name{
+    font-family: 'Gilroy-Black';
+    font-size: $text-size-xxl;
+    text-transform: uppercase;
+    @media screen and (max-width: 400px) {
+      font-size: $text-size-l;
+    }
+
+    &_two{
+      font-family: 'Museo-Sans-Cyrl-300';
+      font-size: $text-size-s;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      @media screen and (max-width: 400px) {
+        font-size: $text-size-xs;
+      }
+    }
+  }
+
+  &_more{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    align-items: center;
+    height: 115px;
+    @media screen and ($desktop1) {
+      height: 100px;
+    }
+  }
+
+  &_item{
+    position: relative;
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-xs;
+    align-items: center;
+    padding-left: 35px;
+    @media screen and ($mobile5) {
+      font-size: 13px;
+      padding-left: 25px;
+    }
+    @media screen and (max-width: 400px) {
+      padding-left: 35px;
+    }
+
+    &:before{
+      position: absolute;
+      font-family: 'FontAwesome';
+      color: $btn-color-main-two;
+      font-size: 18px;
+      top: 50%;
+      left: 10px;
+      transform: translate(-50%, -50%);
+    }
+
+    &.engine:before{
+      content: "\f013";
+    }
+
+    &.snowflake:before{
+      content: "\f2dc";
+    }
+
+    &.transmission:before{
+      content: "\f085";
+    }
+
+    &.music:before{
+      content: "\f001";
+    }
+
+    &.power:before{
+      content: "\f0e4";
+    }
+
+    &.seat:before{
+      content: "\f234";
+    }
+  }
+
+  &_extra{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &_price{
+    font-family: 'Gilroy-Black';
+    font-size: $text-size-xxl;
+    @media screen and ($tablet2) {
+      font-size: $text-size-xl;
+    }
+    @media screen and ($mobile5) {
+      font-size: $text-size-l;
+    }
+  }
+
+  &_slider{
+    width: 1600px;
+    margin: 90px auto 0;
+    z-index: 10;
+    overflow-x: hidden;
+    @media screen and ($desktop1) {
+      width: 100%;
+      margin: 70px auto 0;
+    }
+    @media screen and (max-width: 400px) {
+      margin: 50px auto 0;
+    }
+  }
+
+  & .swiper-container{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px 8px 80px;
+    z-index: 10;
+    @media screen and ($desktop1) {
+      position: relative;
+      width: 1600px;
+    }
+    @media screen and ($tablet2) {
+      width: 1200px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 800px;
+    }
+    @media screen and (max-width: 400px) {
+      width: 100%;
+      padding: 0 8px 60px;
+    }
+
+    &:before{
+      @media screen and ($desktop1) {
+        position: absolute;
+        content: "";
+        width: 400px;
+        height: 540px;
+        background-color: white;
+        top: 0;
+        right: 0;
+        opacity: 0.6;
+        z-index: 20;
+      }
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+
+  & .swiper-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 10;
+    @media screen and ($desktop1) {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+  }
+
+  & .swiper-slide {
+    position: relative;
+    height: auto;
+    width: calc(50% - 22px);
+    padding-bottom: 45px;
+    z-index: 10;
+    @media screen and ($desktop1) {
+      width: 100%;
+      padding-bottom: 0;
+    }
+
+    &.swiper-slide-next{
+      @media screen and (max-width: 800px) {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  & .swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @media screen and (max-width: 800px) {
+      position: absolute;
+      bottom: 0;
+      left: 200px;
+    }
+    @media screen and (max-width: 400px) {
+      left: 50%;
+    }
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    background-color: #8999ab;
+    border: 3px solid #ffffff;
+    opacity: 1;
+    outline: none;
+    margin: 0 20px;
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background-color: $btn-color-main;
+    border: none;
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+}

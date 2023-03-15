@@ -1,0 +1,52 @@
+<section class="necessary mgt-60">
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Не забудте забронировать</span>
+      <h2 class="title">Экскурсии в Черногории</h2>
+    </div>
+    <div class="filter">
+      <h3 class="filter_name">Поиск экскурсии</h3>
+      <form class="filter_form short">
+        <div class="filter_select">
+          <div class="filter_select_main">Город</div>
+          <div class="filter_select_list">
+            <div class="filter_select_item">Котор</div>
+            <div class="filter_select_item">Будва</div>
+            <div class="filter_select_item">Херцег-Нови</div>
+            <div class="filter_select_item">Петровац</div>
+            <div class="filter_select_item">Бар</div>
+            <div class="filter_select_item">Бечичи</div>
+            <div class="filter_select_item">Тиват</div>
+          </div>
+        </div>
+        <button class="btn-bl" type="submit">Поиск экскурсии</button>
+      </form>
+    </div>
+    <div class="article_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="article">
+        <img class="article_img transform-none" src="`+context.arr[i].image+`">
+        <div class="article_info">
+          <div>
+            <div class="article_caption short">`+context.arr[i].caption+`</div>
+            <div class="article_description">`+context.arr[i].description+`</div>
+          </div>
+          <div class="hotel_extra">
+            <div class="hotel_price">`+context.arr[i].price+`</div>
+            <a class="btn-or request order_excursion" href="#orderExcursion">Бронировать</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    <nav class="page_nav">
+      <a class="page_nav_prev" href="javascript:void(0);">←</a>
+      <a class="page_nav_number active" href="javascript:void(0);">1</a>
+      <a class="page_nav_number" href="javascript:void(0);">2</a>
+      <a class="page_nav_number" href="javascript:void(0);">3</a>
+      <a class="page_nav_number" href="javascript:void(0);">...</a>
+      <a class="page_nav_number" href="javascript:void(0);">19</a>
+      <a class="page_nav_next" href="javascript:void(0);">→</a>
+    </nav>
+  </div>
+</section>

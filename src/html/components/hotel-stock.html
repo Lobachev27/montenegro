@@ -1,0 +1,27 @@
+<section class="auto">
+  <div class="auto_bg"></div>
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Выгодное предложение на</span>
+      <h2 class="title">Отели в Будве</h2>
+    </div>
+    <div class="hotel_wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="hotel_box">
+        <a href="`+context.arr[i].link+`">
+          <img class="hotel_img" src="./img/hotel-sea-fort.jpg">
+        </a>
+        <div class="hotel_info">
+          <div class="hotel_name">`+context.arr[i].name+`</div>
+          <div class="hotel_stars">`+context.arr[i].stars+`</div>
+          <div class="hotel_description">`+context.arr[i].description+`</div>
+          <div class="hotel_extra">
+            <div class="hotel_price">`+context.arr[i].price+`</div>
+            <a class="btn-or request" href="`+context.arr[i].link+`">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

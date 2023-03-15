@@ -1,0 +1,455 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.tours_city{
+  &_box{
+    display: grid;
+    grid-template-columns: 9fr 11fr;
+    grid-template-rows: auto;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    line-height: 1em;
+    box-shadow: 0px 5px 20px $shadow-btn-main-two;
+    @media screen and ($desktop1) {
+      grid-template-columns: auto;
+      grid-template-rows: 9fr 11fr;
+    }
+    @media screen and ($mobile3) {
+      display: block;
+      height: auto;
+    }
+
+    & a .auto_img{
+      transition: all 0.4s;
+      @media screen and ($mobile3) {
+        max-height: 180px;
+      }
+
+      &:hover{
+        transform: scale(1.1) !important;
+        transition: all 0.4s;
+      }
+    }
+  }
+
+  &_row{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-column-gap: 20px;
+    @media screen and ($desktop1) {
+      grid-template-columns: auto;
+      grid-template-rows: 20px auto;
+      grid-row-gap: 5px;
+    }
+  }
+
+  &_include{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-items: center;
+    align-items: center;
+    @media screen and ($desktop1) {
+      justify-content: start;
+      order: -1;
+      margin-left: -5px;
+    }
+    @media screen and ($tablet2) {
+      margin-left: -6px;
+    }
+  }
+
+  &_info{
+    display: grid;
+    padding: 30px;
+    background-color: white;
+    z-index: 20;
+    @media screen and ($tablet2) {
+      padding: 30px 25px;
+    }
+    @media screen and ($tablet1) {
+      padding: 30px;
+    }
+    @media screen and ($mobile5) {
+      padding: 20px 15px;
+    }
+    @media screen and ($mobile3) {
+      position: relative;
+      background-color: white;
+      padding: 20px;
+      z-index: 10;
+    }
+  }
+
+  &_more{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 10px;
+    @media screen and ($tablet2) {
+      height: 60px;
+    }
+  }
+
+  &_item{
+    position: relative;
+    font-family: 'Gilroy-Bold';
+    font-size: $text-size-s;
+    align-items: center;
+    padding-left: 35px;
+    @media screen and ($tablet2) {
+      font-size: $text-size-xs;
+      padding-left: 30px;
+    }
+    @media screen and ($mobile5) {
+      font-family: 'Gilroy-Semibold';
+      font-size: $text-size-xs;
+      padding-left: 25px;
+    }
+
+    &:before{
+      position: absolute;
+      font-family: 'FontAwesome';
+      font-weight: 100;
+      color: #2a53b4;
+      font-size: 18px;
+      top: 50%;
+      left: 10px;
+      transform: translate(-50%, -50%);
+      @media screen and ($mobile5) {
+        font-size: 16px;
+      }
+    }
+
+    &:nth-child(1):before{
+      content: "\f017";
+    }
+
+    &:nth-child(2):before{
+      content: "\f236";
+    }
+
+    &:nth-child(3):before{
+      content: "\f007";
+    }
+
+    &:nth-child(4):before{
+      content: "\f0f4";
+    }
+  }
+
+  &_icon{
+    position: relative;
+    color: #d6d6d6;
+    width: 100%;
+    min-width: 20px;
+    height: 100%;
+    @media screen and ($desktop1) {
+      min-width: 35px;
+    }
+    @media screen and ($tablet2) {
+      min-width: 30px;
+    }
+
+    &:before{
+      position: absolute;
+      font-family: 'FontAwesome';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:after{
+      display: none;
+      position: absolute;
+      font-family: 'Museo-Sans-Cyrl-300';
+      font-size: $text-size-xs;
+      color: $text-color-main;
+      top: 40px;
+      padding: 2px 7px;
+      background-color: white;
+      box-shadow: 0px 5px 20px $shadow-btn-main-two;
+      border-radius: 1px;
+      @media screen and ($desktop1) {
+        top: 30px;
+      }
+      @media screen and ($tablet2) {
+        font-size: 13px;
+        padding: 2px 7px;
+      }
+    }
+
+    &:hover{
+      color: $btn-color-main-two-hover;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:after{
+        display: block;
+        z-index: 10;
+      }
+    }
+
+    &.home{
+      &:before{
+        font-size: 23px;
+        content: "\f015";
+        @media screen and ($tablet2) {
+          font-size: 20px;
+        }
+      }
+
+      &:after{
+        width: 168px;
+        content: "Проживание включено";
+        @media screen and ($tablet2) {
+          width: 157px;
+        }
+      }
+    }
+
+    &.plane{
+      &:before{
+        font-size: 22px;
+        content: "\f072";
+        @media screen and ($tablet2) {
+          font-size: 20px;
+        }
+      }
+
+      &:after{
+        width: 160px;
+        content: "Авиаперелет включен";
+        @media screen and ($tablet2) {
+          width: 150px;
+        }
+      }
+    }
+
+    &.bus{
+      &:before{
+        font-size: 19px;
+        content: "\f207";
+        @media screen and ($tablet2) {
+          font-size: 16px;
+        }
+      }
+
+      &:after{
+        width: 140px;
+        content: "Трансфер включен";
+        @media screen and ($tablet2) {
+          width: 130px;
+        }
+      }
+    }
+
+    &.spoon{
+      &:before{
+        content: "\f1b1";
+        font-size: 21px;
+        @media screen and ($tablet2) {
+          font-size: 16px;
+        }
+      }
+
+      &:after{
+        width: 140px;
+        content: "Питание включено";
+        @media screen and ($tablet2) {
+          width: 130px;
+        }
+      }
+    }
+
+    &.cross{
+      &:before{
+        font-size: 24px;
+        content: "\f067";
+        @media screen and ($tablet2) {
+          font-size: 22px;
+        }
+      }
+
+      &:after{
+        width: 150px;
+        content: "Страховка включена";
+        @media screen and ($tablet2) {
+          width: 140px;
+        }
+      }
+    }
+  }
+}
+
+.tours_page{
+  &_wrapper{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 25px auto auto auto;
+    grid-row-gap: 45px;
+    width: 600px;
+    margin-top: 10px;
+    @media screen and ($desktop1) {
+      grid-row-gap: 30px;
+      width: 530px;
+      margin-top: 10px;
+    }
+    @media screen and ($tablet2) {
+      grid-row-gap: 20px;
+      width: 440px;
+      margin-top: 10px;
+    }
+    @media screen and ($tablet1) {
+      width: 100%;
+    }
+    @media screen and ($mobile5) {
+      margin-bottom: 20px;
+    }
+    @media screen and ($mobile3) {
+      margin-bottom: 20px;
+    }
+
+    & .hotel_stars{
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    & .tours_city_include{
+      height: 24px;
+    }
+  }
+
+  &_row{
+    display: grid;
+    grid-template-columns: 150px 200px;
+    align-items: center;
+    @media screen and (max-width: 440px) {
+      display: grid;
+      grid-template-columns: 130px 150px;
+    }
+
+    & .tours_city_include {
+      @media screen and ($desktop1) {
+        order: 1;
+      }
+
+      & .tours_city_icon:after {
+        @media screen and ($mobile3) {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &_description{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-m;
+    @media screen and ($desktop1) {
+      font-size: $text-size-s;
+    }
+    @media screen and ($mobile3) {
+      font-size: 14px;
+    }
+  }
+
+  &_more{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    align-items: center;
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and ($mobile5) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and ($mobile3) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 440px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 380px) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &_item{
+    position: relative;
+    font-family: 'Gilroy-Bold';
+    font-size: $text-size-m;
+    align-items: center;
+    padding: 10px 0 10px 35px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-s;
+      padding: 8px 0 8px 35px;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-xs;
+      padding: 7px 0 7px 30px;
+    }
+
+    &:before{
+      position: absolute;
+      font-family: 'FontAwesome';
+      color: $btn-color-main;
+      font-size: 20px;
+      top: 50%;
+      left: 10px;
+      transform: translate(-50%, -50%);
+      @media screen and ($mobile3) {
+        font-size: 18px;
+      }
+    }
+
+    &.days:before{
+      content: "\f017";
+    }
+
+    &.home:before{
+      content: "\f015";
+      font-size: 22px;
+      @media screen and ($mobile3) {
+        font-size: 20px;
+      }
+    }
+
+    &.people:before{
+      content: "\f007";
+    }
+
+    &.plane:before{
+      content: "\f072";
+      font-size: 22px;
+      @media screen and ($mobile3) {
+        font-size: 20px;
+      }
+    }
+
+    &.seat:before{
+      content: "\f236";
+    }
+
+    &.cross:before{
+      content: "\f067";
+      font-size: 22px;
+      @media screen and ($mobile3) {
+        font-size: 20px;
+      }
+    }
+
+    &.breakfast:before{
+      content: "\f0f4";
+    }
+
+    &.bus:before{
+      content: "\f207";
+    }
+  }
+}

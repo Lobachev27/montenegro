@@ -1,0 +1,34 @@
+<section class="hotel">
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Бронируйте лучшие</span>
+      <h2 class="title">Отели Черногории</h2>
+    </div>
+  </div>
+  <div class="hotel_slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <div class="swiper-slide">
+          <div class="hotel_box">
+            <a href="`+context.arr[i].link+`">
+              <img class="hotel_img" src="`+context.arr[i].image+`">
+            </a>
+            <div class="hotel_info">
+              <div class="hotel_name">`+context.arr[i].name+`</div>
+              <div class="hotel_stars">`+context.arr[i].stars+`</div>
+              <div class="hotel_description">`+context.arr[i].description+`</div>
+              <div class="hotel_extra">
+                <div class="hotel_price">`+context.arr[i].price+`</div>
+                <a class="btn-or request" href="`+context.arr[i].link+`">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

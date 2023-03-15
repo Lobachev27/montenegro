@@ -1,0 +1,52 @@
+<header class="header">
+  <div class="container">
+    <div class="header-desktop">
+      <div class="header_logo">
+        <a class="header_logo_link" href="./">
+          @@if(!context.white){
+          <img class="header_logo_img" src="./img/logo.png" alt="Montenegro Tours" title="Montenegro Tours">
+          }
+          @@if(context.white){
+          <img class="header_logo_img" src="./img/logo-white.png" alt="Montenegro Tours" title="Montenegro Tours">
+          }
+        </a>
+      </div>
+      <nav class="header_nav">
+        <a class="header_nav_item @@if(context.white){txt-white} @@if(context.linkActive === 1){active}" href="./tours.html">Туры</a>
+        <a class="header_nav_item @@if(context.white){txt-white} @@if(context.linkActive === 2){active}" href="./hotel.html">Отели</a>
+        <!--<a class="header_nav_item @@if(context.white){txt-white} @@if(context.linkActive === 3){active}" href="./excursion-list.html">Экскурсии</a>-->
+        <a class="header_nav_item @@if(context.white){txt-white} @@if(context.linkActive === 4){active}" href="./auto.html">Аренда автомобилей</a>
+        <a class="header_nav_item @@if(context.white){txt-white} @@if(context.linkActive === 5){active}" href="./stock.html">Акции</a>
+        <a class="header_nav_item @@if(context.white){txt-white} @@if(context.linkActive === 6){active}" href="./article.html">Полезное</a>
+        <a class="header_nav_item @@if(context.white){txt-white} @@if(context.linkActive === 7){active}" href="./about_us.html">О нас</a>
+        <a class="header_nav_item @@if(context.white){txt-white} @@if(context.linkActive === 8){active}" href="./contacts.html">Контакты</a>
+      </nav>
+      <div class="header_burger @@if(context.white){white}"></div>
+      <div class="header_phone">
+        <a class="header_phone_number @@if(context.white){txt-white}" href="tel:+74991305509">+7 (499) 130 55 09</a>
+        <a class="btn-tr @@if(context.white){txt-white} call_me" href="#callMe">Заказать звонок</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="header-mobile">
+  <div class="header_cross"></div>
+  <nav class="header_nav mobile">
+    <a class="header_nav_item mobile @@if(context.linkActive === 1){active}" href="./tours.html">Туры</a>
+    <a class="header_nav_item mobile @@if(context.linkActive === 2){active}" href="./hotel.html">Отели</a>
+    <!--<a class="header_nav_item mobile @@if(context.linkActive === 3){active}" href="./excursion-list.html">Экскурсии</a>-->
+    <a class="header_nav_item mobile @@if(context.linkActive === 4){active}" href="./auto.html">Аренда автомобилей</a>
+    <a class="header_nav_item mobile @@if(context.linkActive === 5){active}" href="./stock.html">Акции</a>
+    <a class="header_nav_item mobile @@if(context.linkActive === 6){active}" href="./article.html">Полезное</a>
+    <a class="header_nav_item mobile @@if(context.linkActive === 7){active}" href="./about_us.html">О нас</a>
+    <a class="header_nav_item mobile @@if(context.linkActive === 8){active}" href="./contacts.html">Контакты</a>
+  </nav>
+  <div class="header_phone mobile">
+    <a class="header_phone_number" href="tel:+74991305509">+7 (499) 130 55 09</a>
+    <a class="btn-tr call_me" href="#callMe">Заказать звонок</a>
+  </div>
+  <a class="header_mail" href="mailto:info@montenegro-tours.ru">info@montenegro-tours.ru</a>
+  <div class="header_address">108811, г.Москва, поселение Московский, 22-ой км.
+    Киевского шоссе, домовладение 4</div>
+</div>

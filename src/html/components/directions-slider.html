@@ -1,0 +1,24 @@
+<section class="directions mgt-120">
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Самые популярные</span>
+      <h2 class="title">Направления туров</h2>
+    </div>
+  </div>
+  <div class="directions_slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <div class="swiper-slide">
+          <div class="directions_box block">
+            <img class="directions_img" src="`+context.arr[i].image+`">
+            <div class="directions_mask"></div>
+            `+context.arr[i].content+`
+            <a class="directions_link" href="`+context.arr[i].link+`"></a>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

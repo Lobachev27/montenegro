@@ -1,0 +1,978 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.application{
+  position: relative;
+  width: 100%;
+  height: 1250px;
+  @media screen and ($tablet2) {
+    height: 1100px;
+  }
+  @media screen and ($tablet1) {
+    height: 950px;
+  }
+
+  &_bg{
+    position: absolute;
+    background: url("../img/application_bg.jpg") no-repeat 0px;
+    background-position: left;
+    background-size: cover;
+    width: 100%;
+    height: calc(100% + 150px);
+    top: -150px;
+    z-index: -1;
+  }
+
+  &_plane{
+    &.one{
+      position: absolute;
+      top: 608px;
+      left: 522px;
+      width: 60px;
+      height: 40px;
+      z-index: 10;
+      @media screen and ($tablet2) {
+        top: 525px;
+        left: 464px;
+      }
+
+      &:before{
+        font-family: 'FontAwesome';
+        font-size: 44px;
+        content: "\f072";
+        color: #8fa8db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1em;
+        transform: rotate(-65deg);
+        @media screen and ($tablet2) {
+          font-size: 40px;
+        }
+      }
+
+      &:after{
+        position: absolute;
+        font-family: 'FontAwesome';
+        font-size: 44px;
+        content: "\f072";
+        color: #8fa8db;
+        top: 18px;
+        left: 7px;
+        opacity: 0.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1em;
+        transform: rotate(-65deg);
+        @media screen and ($tablet2) {
+          font-size: 40px;
+        }
+      }
+
+      animation: plane1-animation 7s linear forwards;
+      -webkit-animation: plane1-animation 7s linear forwards;
+      -moz-animation: plane1-animation 7s linear forwards;
+      -o-animation: plane1-animation 7s linear forwards;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      @media screen and ($tablet2) {
+        animation: plane1-animation 6s linear forwards;
+        -webkit-animation: plane1-animation 6s linear forwards;
+        -moz-animation: plane1-animation 6s linear forwards;
+        -o-animation: plane1-animation 6s linear forwards;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+        @keyframes plane1-animation {
+          0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+          5% {transform:translate(-9px, -24px) rotate(0) scale(0.75);}
+          10% {transform:translate(-18px, -48px) rotate(-1deg) scale(0.8);}
+          15% {transform:translate(-29px, -73px) rotate(-3deg) scale(0.85);}
+          20% {transform:translate(-38px, -96px) rotate(-4deg) scale(0.9);}
+          25% {transform:translate(-47px, -120px) rotate(-8deg) scale(0.95);}
+          30% {transform:translate(-61px, -147px) rotate(-7deg) scale(1);}
+          35% {transform:translate(-75px, -176px) rotate(-9deg) scale(1.05);}
+          40% {transform:translate(-89px, -201px) rotate(-9deg) scale(1.1);}
+          45% {transform:translate(-104px, -228px) rotate(-11deg) scale(1.1);}
+          50% {transform:translate(-120px, -255px) rotate(-14deg) scale(1.1);}
+          55% {transform:translate(-136px, -280px) rotate(-15deg) scale(1.1);}
+          60% {transform:translate(-152px, -302px) rotate(-15deg) scale(1.1);}
+          65% {transform:translate(-168px, -322px) rotate(-17deg) scale(1.05);}
+          70% {transform:translate(-184px, -342px) rotate(-19deg) scale(1);}
+          75% {transform:translate(-200px, -360px) rotate(-21deg) scale(0.95);}
+          80% {transform:translate(-223px, -385px) rotate(-23deg) scale(0.9);}
+          85% {transform:translate(-246px, -408px) rotate(-25deg) scale(0.85);}
+          90% {transform:translate(-269px, -428px) rotate(-28deg) scale(0.8);}
+          95% {transform:translate(-292px, -448px) rotate(-38deg) scale(0.75);}
+          100% {transform:translate(-315px, -460px) rotate(-50deg) scale(0.7);}
+        }
+        @-webkit-keyframes plane1-animation {
+          0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+          5% {transform:translate(-9px, -24px) rotate(0) scale(0.75);}
+          10% {transform:translate(-18px, -48px) rotate(-1deg) scale(0.8);}
+          15% {transform:translate(-29px, -73px) rotate(-3deg) scale(0.85);}
+          20% {transform:translate(-38px, -96px) rotate(-4deg) scale(0.9);}
+          25% {transform:translate(-47px, -120px) rotate(-8deg) scale(0.95);}
+          30% {transform:translate(-61px, -147px) rotate(-7deg) scale(1);}
+          35% {transform:translate(-75px, -176px) rotate(-9deg) scale(1.05);}
+          40% {transform:translate(-89px, -201px) rotate(-9deg) scale(1.1);}
+          45% {transform:translate(-104px, -228px) rotate(-11deg) scale(1.1);}
+          50% {transform:translate(-120px, -255px) rotate(-14deg) scale(1.1);}
+          55% {transform:translate(-136px, -280px) rotate(-15deg) scale(1.1);}
+          60% {transform:translate(-152px, -302px) rotate(-15deg) scale(1.1);}
+          65% {transform:translate(-168px, -322px) rotate(-17deg) scale(1.05);}
+          70% {transform:translate(-184px, -342px) rotate(-19deg) scale(1);}
+          75% {transform:translate(-200px, -360px) rotate(-21deg) scale(0.95);}
+          80% {transform:translate(-223px, -385px) rotate(-23deg) scale(0.9);}
+          85% {transform:translate(-246px, -408px) rotate(-25deg) scale(0.85);}
+          90% {transform:translate(-269px, -428px) rotate(-28deg) scale(0.8);}
+          95% {transform:translate(-292px, -448px) rotate(-38deg) scale(0.75);}
+          100% {transform:translate(-315px, -460px) rotate(-50deg) scale(0.7);}
+        }
+        @-moz-keyframes plane1-animation {
+          0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+          5% {transform:translate(-9px, -24px) rotate(0) scale(0.75);}
+          10% {transform:translate(-18px, -48px) rotate(-1deg) scale(0.8);}
+          15% {transform:translate(-29px, -73px) rotate(-3deg) scale(0.85);}
+          20% {transform:translate(-38px, -96px) rotate(-4deg) scale(0.9);}
+          25% {transform:translate(-47px, -120px) rotate(-8deg) scale(0.95);}
+          30% {transform:translate(-61px, -147px) rotate(-7deg) scale(1);}
+          35% {transform:translate(-75px, -176px) rotate(-9deg) scale(1.05);}
+          40% {transform:translate(-89px, -201px) rotate(-9deg) scale(1.1);}
+          45% {transform:translate(-104px, -228px) rotate(-11deg) scale(1.1);}
+          50% {transform:translate(-120px, -255px) rotate(-14deg) scale(1.1);}
+          55% {transform:translate(-136px, -280px) rotate(-15deg) scale(1.1);}
+          60% {transform:translate(-152px, -302px) rotate(-15deg) scale(1.1);}
+          65% {transform:translate(-168px, -322px) rotate(-17deg) scale(1.05);}
+          70% {transform:translate(-184px, -342px) rotate(-19deg) scale(1);}
+          75% {transform:translate(-200px, -360px) rotate(-21deg) scale(0.95);}
+          80% {transform:translate(-223px, -385px) rotate(-23deg) scale(0.9);}
+          85% {transform:translate(-246px, -408px) rotate(-25deg) scale(0.85);}
+          90% {transform:translate(-269px, -428px) rotate(-28deg) scale(0.8);}
+          95% {transform:translate(-292px, -448px) rotate(-38deg) scale(0.75);}
+          100% {transform:translate(-315px, -460px) rotate(-50deg) scale(0.7);}
+        }
+        @-o-keyframes plane1-animation {
+          0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+          5% {transform:translate(-9px, -24px) rotate(0) scale(0.75);}
+          10% {transform:translate(-18px, -48px) rotate(-1deg) scale(0.8);}
+          15% {transform:translate(-29px, -73px) rotate(-3deg) scale(0.85);}
+          20% {transform:translate(-38px, -96px) rotate(-4deg) scale(0.9);}
+          25% {transform:translate(-47px, -120px) rotate(-8deg) scale(0.95);}
+          30% {transform:translate(-61px, -147px) rotate(-7deg) scale(1);}
+          35% {transform:translate(-75px, -176px) rotate(-9deg) scale(1.05);}
+          40% {transform:translate(-89px, -201px) rotate(-9deg) scale(1.1);}
+          45% {transform:translate(-104px, -228px) rotate(-11deg) scale(1.1);}
+          50% {transform:translate(-120px, -255px) rotate(-14deg) scale(1.1);}
+          55% {transform:translate(-136px, -280px) rotate(-15deg) scale(1.1);}
+          60% {transform:translate(-152px, -302px) rotate(-15deg) scale(1.1);}
+          65% {transform:translate(-168px, -322px) rotate(-17deg) scale(1.05);}
+          70% {transform:translate(-184px, -342px) rotate(-19deg) scale(1);}
+          75% {transform:translate(-200px, -360px) rotate(-21deg) scale(0.95);}
+          80% {transform:translate(-223px, -385px) rotate(-23deg) scale(0.9);}
+          85% {transform:translate(-246px, -408px) rotate(-25deg) scale(0.85);}
+          90% {transform:translate(-269px, -428px) rotate(-28deg) scale(0.8);}
+          95% {transform:translate(-292px, -448px) rotate(-38deg) scale(0.75);}
+          100% {transform:translate(-315px, -460px) rotate(-50deg) scale(0.7);}
+        }
+      }
+
+      @keyframes plane1-animation {
+        0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+        5% {transform:translate(-11px, -29px) rotate(0) scale(0.75);}
+        10% {transform:translate(-21px, -58px) rotate(-1deg) scale(0.8);}
+        15% {transform:translate(-33px, -88px) rotate(-3deg) scale(0.85);}
+        20% {transform:translate(-46px, -118px) rotate(-4deg) scale(0.9);}
+        25% {transform:translate(-58px, -148px) rotate(-8deg) scale(0.95);}
+        30% {transform:translate(-71px, -176px) rotate(-7deg) scale(1);}
+        35% {transform:translate(-86px, -204px) rotate(-9deg) scale(1.05);}
+        40% {transform:translate(-100px, -232px) rotate(-9deg) scale(1.1);}
+        45% {transform:translate(-117px, -261px) rotate(-11deg) scale(1.1);}
+        50% {transform:translate(-134px, -290px) rotate(-14deg) scale(1.1);}
+        55% {transform:translate(-153px, -316px) rotate(-15deg) scale(1.1);}
+        60% {transform:translate(-170px, -340px) rotate(-15deg) scale(1.1);}
+        65% {transform:translate(-187px, -365px) rotate(-17deg) scale(1.05);}
+        70% {transform:translate(-211px, -393px) rotate(-19deg) scale(1);}
+        75% {transform:translate(-230px, -416px) rotate(-21deg) scale(0.95);}
+        80% {transform:translate(-252px, -440px) rotate(-23deg) scale(0.9);}
+        85% {transform:translate(-280px, -465px) rotate(-25deg) scale(0.85);}
+        90% {transform:translate(-303px, -484px) rotate(-28deg) scale(0.8);}
+        95% {transform:translate(-324px, -504px) rotate(-38deg) scale(0.75);}
+        100% {transform:translate(-345px, -520px) rotate(-50deg) scale(0.7);}
+      }
+
+      @-webkit-keyframes plane1-animation {
+        0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+        5% {transform:translate(-11px, -29px) rotate(0) scale(0.75);}
+        10% {transform:translate(-21px, -58px) rotate(-1deg) scale(0.8);}
+        15% {transform:translate(-33px, -88px) rotate(-3deg) scale(0.85);}
+        20% {transform:translate(-46px, -118px) rotate(-4deg) scale(0.9);}
+        25% {transform:translate(-58px, -148px) rotate(-8deg) scale(0.95);}
+        30% {transform:translate(-71px, -176px) rotate(-7deg) scale(1);}
+        35% {transform:translate(-86px, -204px) rotate(-9deg) scale(1.05);}
+        40% {transform:translate(-100px, -232px) rotate(-9deg) scale(1.1);}
+        45% {transform:translate(-117px, -261px) rotate(-11deg) scale(1.1);}
+        50% {transform:translate(-134px, -290px) rotate(-14deg) scale(1.1);}
+        55% {transform:translate(-153px, -316px) rotate(-15deg) scale(1.1);}
+        60% {transform:translate(-170px, -340px) rotate(-15deg) scale(1.1);}
+        65% {transform:translate(-187px, -365px) rotate(-17deg) scale(1.05);}
+        70% {transform:translate(-211px, -393px) rotate(-19deg) scale(1);}
+        75% {transform:translate(-230px, -416px) rotate(-21deg) scale(0.95);}
+        80% {transform:translate(-252px, -440px) rotate(-23deg) scale(0.9);}
+        85% {transform:translate(-280px, -465px) rotate(-25deg) scale(0.85);}
+        90% {transform:translate(-303px, -484px) rotate(-28deg) scale(0.8);}
+        95% {transform:translate(-324px, -504px) rotate(-38deg) scale(0.75);}
+        100% {transform:translate(-345px, -520px) rotate(-50deg) scale(0.7);}
+      }
+
+      @-moz-keyframes plane1-animation {
+        0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+        5% {transform:translate(-11px, -29px) rotate(0) scale(0.75);}
+        10% {transform:translate(-21px, -58px) rotate(-1deg) scale(0.8);}
+        15% {transform:translate(-33px, -88px) rotate(-3deg) scale(0.85);}
+        20% {transform:translate(-46px, -118px) rotate(-4deg) scale(0.9);}
+        25% {transform:translate(-58px, -148px) rotate(-8deg) scale(0.95);}
+        30% {transform:translate(-71px, -176px) rotate(-7deg) scale(1);}
+        35% {transform:translate(-86px, -204px) rotate(-9deg) scale(1.05);}
+        40% {transform:translate(-100px, -232px) rotate(-9deg) scale(1.1);}
+        45% {transform:translate(-117px, -261px) rotate(-11deg) scale(1.1);}
+        50% {transform:translate(-134px, -290px) rotate(-14deg) scale(1.1);}
+        55% {transform:translate(-153px, -316px) rotate(-15deg) scale(1.1);}
+        60% {transform:translate(-170px, -340px) rotate(-15deg) scale(1.1);}
+        65% {transform:translate(-187px, -365px) rotate(-17deg) scale(1.05);}
+        70% {transform:translate(-211px, -393px) rotate(-19deg) scale(1);}
+        75% {transform:translate(-230px, -416px) rotate(-21deg) scale(0.95);}
+        80% {transform:translate(-252px, -440px) rotate(-23deg) scale(0.9);}
+        85% {transform:translate(-280px, -465px) rotate(-25deg) scale(0.85);}
+        90% {transform:translate(-303px, -484px) rotate(-28deg) scale(0.8);}
+        95% {transform:translate(-324px, -504px) rotate(-38deg) scale(0.75);}
+        100% {transform:translate(-345px, -520px) rotate(-50deg) scale(0.7);}
+      }
+
+      @-o-keyframes plane1-animation {
+        0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+        5% {transform:translate(-11px, -29px) rotate(0) scale(0.75);}
+        10% {transform:translate(-21px, -58px) rotate(-1deg) scale(0.8);}
+        15% {transform:translate(-33px, -88px) rotate(-3deg) scale(0.85);}
+        20% {transform:translate(-46px, -118px) rotate(-4deg) scale(0.9);}
+        25% {transform:translate(-58px, -148px) rotate(-8deg) scale(0.95);}
+        30% {transform:translate(-71px, -176px) rotate(-7deg) scale(1);}
+        35% {transform:translate(-86px, -204px) rotate(-9deg) scale(1.05);}
+        40% {transform:translate(-100px, -232px) rotate(-9deg) scale(1.1);}
+        45% {transform:translate(-117px, -261px) rotate(-11deg) scale(1.1);}
+        50% {transform:translate(-134px, -290px) rotate(-14deg) scale(1.1);}
+        55% {transform:translate(-153px, -316px) rotate(-15deg) scale(1.1);}
+        60% {transform:translate(-170px, -340px) rotate(-15deg) scale(1.1);}
+        65% {transform:translate(-187px, -365px) rotate(-17deg) scale(1.05);}
+        70% {transform:translate(-211px, -393px) rotate(-19deg) scale(1);}
+        75% {transform:translate(-230px, -416px) rotate(-21deg) scale(0.95);}
+        80% {transform:translate(-252px, -440px) rotate(-23deg) scale(0.9);}
+        85% {transform:translate(-280px, -465px) rotate(-25deg) scale(0.85);}
+        90% {transform:translate(-303px, -484px) rotate(-28deg) scale(0.8);}
+        95% {transform:translate(-324px, -504px) rotate(-38deg) scale(0.75);}
+        100% {transform:translate(-345px, -520px) rotate(-50deg) scale(0.7);}
+      }
+    }
+
+    &.two{
+      position: absolute;
+      top: 967px;
+      left: 163px;
+      width: 60px;
+      height: 40px;
+      z-index: 10;
+      @media screen and ($tablet2) {
+        top: 844px;
+        left: 142px;
+      }
+
+      &:before{
+        font-family: 'FontAwesome';
+        font-size: 50px;
+        content: "\f072";
+        color: #8fa8db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1em;
+        transform: rotate(-65deg);
+        @media screen and ($tablet2) {
+          font-size: 45px;
+        }
+      }
+
+      &:after{
+        position: absolute;
+        font-family: 'FontAwesome';
+        font-size: 50px;
+        content: "\f072";
+        color: #8fa8db;
+        top: 15px;
+        left: 10px;
+        opacity: 0.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1em;
+        transform: rotate(-65deg);
+        @media screen and ($tablet2) {
+          font-size: 45px;
+        }
+      }
+
+      animation: plane2-animation 8s linear forwards;
+      -webkit-animation: plane2-animation 8s linear forwards;
+      -moz-animation: plane2-animation 8s linear forwards;
+      -o-animation: plane2-animation 8s linear forwards;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      @media screen and ($tablet2) {
+        animation: plane2-animation 7s linear forwards;
+        -webkit-animation: plane2-animation 7s linear forwards;
+        -moz-animation: plane2-animation 7s linear forwards;
+        -o-animation: plane2-animation 7s linear forwards;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+        @keyframes plane2-animation {
+          0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+          5% {transform:translate(-9px, -27px) rotate(1deg) scale(0.75);}
+          10% {transform:translate(-19px, -54px) rotate(1deg) scale(0.8);}
+          15% {transform:translate(-26px, -80px) rotate(2deg) scale(0.85);}
+          20% {transform:translate(-34px, -110px) rotate(3deg) scale(0.9);}
+          25% {transform:translate(-42px, -140px) rotate(5deg) scale(0.95);}
+          30% {transform:translate(-50px, -170px) rotate(6deg) scale(1);}
+          35% {transform:translate(-57px, -200px) rotate(7deg) scale(1.05);}
+          40% {transform:translate(-63px, -230px) rotate(9deg) scale(1.1);}
+          45% {transform:translate(-70px, -260px) rotate(10deg) scale(1.15);}
+          50% {transform:translate(-75px, -290px) rotate(12deg) scale(1.15);}
+          55% {transform:translate(-78px, -320px) rotate(12deg) scale(1.15);}
+          60% {transform:translate(-82px, -350px) rotate(14deg) scale(1.1);}
+          65% {transform:translate(-85px, -380px) rotate(18deg) scale(1.05);}
+          70% {transform:translate(-86px, -415px) rotate(20deg) scale(1);}
+          75% {transform:translate(-86px, -450px) rotate(25deg) scale(0.95);}
+          80% {transform:translate(-82px, -480px) rotate(30deg) scale(0.9);}
+          85% {transform:translate(-72px, -522px) rotate(40deg) scale(0.85);}
+          90% {transform:translate(-58px, -552px) rotate(50deg) scale(0.8);}
+          95% {transform:translate(-30px, -587px) rotate(75deg) scale(0.75);}
+          100% {transform:translate(5px, -602px) rotate(100deg) scale(0.7);}
+        }
+        @-webkit-keyframes plane2-animation {
+          0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+          5% {transform:translate(-9px, -27px) rotate(1deg) scale(0.75);}
+          10% {transform:translate(-19px, -54px) rotate(1deg) scale(0.8);}
+          15% {transform:translate(-26px, -80px) rotate(2deg) scale(0.85);}
+          20% {transform:translate(-34px, -110px) rotate(3deg) scale(0.9);}
+          25% {transform:translate(-42px, -140px) rotate(5deg) scale(0.95);}
+          30% {transform:translate(-50px, -170px) rotate(6deg) scale(1);}
+          35% {transform:translate(-57px, -200px) rotate(7deg) scale(1.05);}
+          40% {transform:translate(-63px, -230px) rotate(9deg) scale(1.1);}
+          45% {transform:translate(-70px, -260px) rotate(10deg) scale(1.15);}
+          50% {transform:translate(-75px, -290px) rotate(12deg) scale(1.15);}
+          55% {transform:translate(-78px, -320px) rotate(12deg) scale(1.15);}
+          60% {transform:translate(-82px, -350px) rotate(14deg) scale(1.1);}
+          65% {transform:translate(-85px, -380px) rotate(18deg) scale(1.05);}
+          70% {transform:translate(-86px, -415px) rotate(20deg) scale(1);}
+          75% {transform:translate(-86px, -450px) rotate(25deg) scale(0.95);}
+          80% {transform:translate(-82px, -480px) rotate(30deg) scale(0.9);}
+          85% {transform:translate(-72px, -522px) rotate(40deg) scale(0.85);}
+          90% {transform:translate(-58px, -552px) rotate(50deg) scale(0.8);}
+          95% {transform:translate(-30px, -587px) rotate(75deg) scale(0.75);}
+          100% {transform:translate(5px, -602px) rotate(100deg) scale(0.7);}
+        }
+        @-moz-keyframes plane2-animation {
+          0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+          5% {transform:translate(-9px, -27px) rotate(1deg) scale(0.75);}
+          10% {transform:translate(-19px, -54px) rotate(1deg) scale(0.8);}
+          15% {transform:translate(-26px, -80px) rotate(2deg) scale(0.85);}
+          20% {transform:translate(-34px, -110px) rotate(3deg) scale(0.9);}
+          25% {transform:translate(-42px, -140px) rotate(5deg) scale(0.95);}
+          30% {transform:translate(-50px, -170px) rotate(6deg) scale(1);}
+          35% {transform:translate(-57px, -200px) rotate(7deg) scale(1.05);}
+          40% {transform:translate(-63px, -230px) rotate(9deg) scale(1.1);}
+          45% {transform:translate(-70px, -260px) rotate(10deg) scale(1.15);}
+          50% {transform:translate(-75px, -290px) rotate(12deg) scale(1.15);}
+          55% {transform:translate(-78px, -320px) rotate(12deg) scale(1.15);}
+          60% {transform:translate(-82px, -350px) rotate(14deg) scale(1.1);}
+          65% {transform:translate(-85px, -380px) rotate(18deg) scale(1.05);}
+          70% {transform:translate(-86px, -415px) rotate(20deg) scale(1);}
+          75% {transform:translate(-86px, -450px) rotate(25deg) scale(0.95);}
+          80% {transform:translate(-82px, -480px) rotate(30deg) scale(0.9);}
+          85% {transform:translate(-72px, -522px) rotate(40deg) scale(0.85);}
+          90% {transform:translate(-58px, -552px) rotate(50deg) scale(0.8);}
+          95% {transform:translate(-30px, -587px) rotate(75deg) scale(0.75);}
+          100% {transform:translate(5px, -602px) rotate(100deg) scale(0.7);}
+        }
+        @-o-keyframes plane2-animation {
+          0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+          5% {transform:translate(-9px, -27px) rotate(1deg) scale(0.75);}
+          10% {transform:translate(-19px, -54px) rotate(1deg) scale(0.8);}
+          15% {transform:translate(-26px, -80px) rotate(2deg) scale(0.85);}
+          20% {transform:translate(-34px, -110px) rotate(3deg) scale(0.9);}
+          25% {transform:translate(-42px, -140px) rotate(5deg) scale(0.95);}
+          30% {transform:translate(-50px, -170px) rotate(6deg) scale(1);}
+          35% {transform:translate(-57px, -200px) rotate(7deg) scale(1.05);}
+          40% {transform:translate(-63px, -230px) rotate(9deg) scale(1.1);}
+          45% {transform:translate(-70px, -260px) rotate(10deg) scale(1.15);}
+          50% {transform:translate(-75px, -290px) rotate(12deg) scale(1.15);}
+          55% {transform:translate(-78px, -320px) rotate(12deg) scale(1.15);}
+          60% {transform:translate(-82px, -350px) rotate(14deg) scale(1.1);}
+          65% {transform:translate(-85px, -380px) rotate(18deg) scale(1.05);}
+          70% {transform:translate(-86px, -415px) rotate(20deg) scale(1);}
+          75% {transform:translate(-86px, -450px) rotate(25deg) scale(0.95);}
+          80% {transform:translate(-82px, -480px) rotate(30deg) scale(0.9);}
+          85% {transform:translate(-72px, -522px) rotate(40deg) scale(0.85);}
+          90% {transform:translate(-58px, -552px) rotate(50deg) scale(0.8);}
+          95% {transform:translate(-30px, -587px) rotate(75deg) scale(0.75);}
+          100% {transform:translate(5px, -602px) rotate(100deg) scale(0.7);}
+        }
+      }
+
+      @keyframes plane2-animation {
+        0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+        5% {transform:translate(-9px, -29px) rotate(1deg) scale(0.75);}
+        10% {transform:translate(-19px, -58px) rotate(1deg) scale(0.8);}
+        15% {transform:translate(-27px, -88px) rotate(2deg) scale(0.85);}
+        20% {transform:translate(-36px, -119px) rotate(3deg) scale(0.9);}
+        25% {transform:translate(-45px, -148px) rotate(5deg) scale(0.95);}
+        30% {transform:translate(-54px, -189px) rotate(6deg) scale(1);}
+        35% {transform:translate(-65px, -230px) rotate(7deg) scale(1.05);}
+        40% {transform:translate(-73px, -272px) rotate(9deg) scale(1.1);}
+        45% {transform:translate(-80px, -314px) rotate(10deg) scale(1.15);}
+        50% {transform:translate(-87px, -355px) rotate(12deg) scale(1.15);}
+        55% {transform:translate(-90px, -392px) rotate(12deg) scale(1.15);}
+        60% {transform:translate(-93px, -429px) rotate(14deg) scale(1.1);}
+        65% {transform:translate(-95px, -460px) rotate(18deg) scale(1.05);}
+        70% {transform:translate(-94px, -499px) rotate(20deg) scale(1);}
+        75% {transform:translate(-93px, -540px) rotate(25deg) scale(0.95);}
+        80% {transform:translate(-86px, -580px) rotate(35deg) scale(0.9);}
+        85% {transform:translate(-70px, -615px) rotate(45deg) scale(0.85);}
+        90% {transform:translate(-48px, -643px) rotate(60deg) scale(0.8);}
+        95% {transform:translate(-20px, -665px) rotate(85deg) scale(0.75);}
+        100% {transform:translate(10px, -675px) rotate(100deg) scale(0.7);}
+      }
+
+      @-webkit-keyframes plane2-animation {
+        0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+        5% {transform:translate(-9px, -29px) rotate(1deg) scale(0.75);}
+        10% {transform:translate(-19px, -58px) rotate(1deg) scale(0.8);}
+        15% {transform:translate(-27px, -88px) rotate(2deg) scale(0.85);}
+        20% {transform:translate(-36px, -119px) rotate(3deg) scale(0.9);}
+        25% {transform:translate(-45px, -148px) rotate(5deg) scale(0.95);}
+        30% {transform:translate(-54px, -189px) rotate(6deg) scale(1);}
+        35% {transform:translate(-65px, -230px) rotate(7deg) scale(1.05);}
+        40% {transform:translate(-73px, -272px) rotate(9deg) scale(1.1);}
+        45% {transform:translate(-80px, -314px) rotate(10deg) scale(1.15);}
+        50% {transform:translate(-87px, -355px) rotate(12deg) scale(1.15);}
+        55% {transform:translate(-90px, -392px) rotate(12deg) scale(1.15);}
+        60% {transform:translate(-93px, -429px) rotate(14deg) scale(1.1);}
+        65% {transform:translate(-95px, -460px) rotate(18deg) scale(1.05);}
+        70% {transform:translate(-94px, -499px) rotate(20deg) scale(1);}
+        75% {transform:translate(-93px, -540px) rotate(25deg) scale(0.95);}
+        80% {transform:translate(-86px, -580px) rotate(35deg) scale(0.9);}
+        85% {transform:translate(-70px, -615px) rotate(45deg) scale(0.85);}
+        90% {transform:translate(-48px, -643px) rotate(60deg) scale(0.8);}
+        95% {transform:translate(-20px, -665px) rotate(85deg) scale(0.75);}
+        100% {transform:translate(10px, -675px) rotate(100deg) scale(0.7);}
+      }
+
+      @-moz-keyframes plane2-animation {
+        0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+        5% {transform:translate(-9px, -29px) rotate(1deg) scale(0.75);}
+        10% {transform:translate(-19px, -58px) rotate(1deg) scale(0.8);}
+        15% {transform:translate(-27px, -88px) rotate(2deg) scale(0.85);}
+        20% {transform:translate(-36px, -119px) rotate(3deg) scale(0.9);}
+        25% {transform:translate(-45px, -148px) rotate(5deg) scale(0.95);}
+        30% {transform:translate(-54px, -189px) rotate(6deg) scale(1);}
+        35% {transform:translate(-65px, -230px) rotate(7deg) scale(1.05);}
+        40% {transform:translate(-73px, -272px) rotate(9deg) scale(1.1);}
+        45% {transform:translate(-80px, -314px) rotate(10deg) scale(1.15);}
+        50% {transform:translate(-87px, -355px) rotate(12deg) scale(1.15);}
+        55% {transform:translate(-90px, -392px) rotate(12deg) scale(1.15);}
+        60% {transform:translate(-93px, -429px) rotate(14deg) scale(1.1);}
+        65% {transform:translate(-95px, -460px) rotate(18deg) scale(1.05);}
+        70% {transform:translate(-94px, -499px) rotate(20deg) scale(1);}
+        75% {transform:translate(-93px, -540px) rotate(25deg) scale(0.95);}
+        80% {transform:translate(-86px, -580px) rotate(35deg) scale(0.9);}
+        85% {transform:translate(-70px, -615px) rotate(45deg) scale(0.85);}
+        90% {transform:translate(-48px, -643px) rotate(60deg) scale(0.8);}
+        95% {transform:translate(-20px, -665px) rotate(85deg) scale(0.75);}
+        100% {transform:translate(10px, -675px) rotate(100deg) scale(0.7);}
+      }
+
+      @-o-keyframes plane2-animation {
+        0% {transform:translate(0px, 0px) rotate(0) scale(0.7);}
+        5% {transform:translate(-9px, -29px) rotate(1deg) scale(0.75);}
+        10% {transform:translate(-19px, -58px) rotate(1deg) scale(0.8);}
+        15% {transform:translate(-27px, -88px) rotate(2deg) scale(0.85);}
+        20% {transform:translate(-36px, -119px) rotate(3deg) scale(0.9);}
+        25% {transform:translate(-45px, -148px) rotate(5deg) scale(0.95);}
+        30% {transform:translate(-54px, -189px) rotate(6deg) scale(1);}
+        35% {transform:translate(-65px, -230px) rotate(7deg) scale(1.05);}
+        40% {transform:translate(-73px, -272px) rotate(9deg) scale(1.1);}
+        45% {transform:translate(-80px, -314px) rotate(10deg) scale(1.15);}
+        50% {transform:translate(-87px, -355px) rotate(12deg) scale(1.15);}
+        55% {transform:translate(-90px, -392px) rotate(12deg) scale(1.15);}
+        60% {transform:translate(-93px, -429px) rotate(14deg) scale(1.1);}
+        65% {transform:translate(-95px, -460px) rotate(18deg) scale(1.05);}
+        70% {transform:translate(-94px, -499px) rotate(20deg) scale(1);}
+        75% {transform:translate(-93px, -540px) rotate(25deg) scale(0.95);}
+        80% {transform:translate(-86px, -580px) rotate(35deg) scale(0.9);}
+        85% {transform:translate(-70px, -615px) rotate(45deg) scale(0.85);}
+        90% {transform:translate(-48px, -643px) rotate(60deg) scale(0.8);}
+        95% {transform:translate(-20px, -665px) rotate(85deg) scale(0.75);}
+        100% {transform:translate(10px, -675px) rotate(100deg) scale(0.7);}
+      }
+    }
+
+    &.three{
+      position: absolute;
+      top: 767px;
+      left: 50%;
+      width: 100%;
+      height: 40px;
+      z-index: 5;
+      @media screen and ($tablet2) {
+        position: absolute;
+        top: 567px;
+        left: 50%;
+        width: 100%;
+        height: 40px;
+        z-index: 10;
+      }
+
+      &:before{
+        font-family: 'FontAwesome';
+        font-size: 60px;
+        content: "\f072";
+        color: #8fa8db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1em;
+        transform: rotate(-180deg);
+        @media screen and ($tablet2) {
+          font-family: 'FontAwesome';
+          font-size: 55px;
+          content: "\f072";
+          color: #8fa8db;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 1em;
+          transform: rotate(-180deg);
+        }
+      }
+
+      animation: plane3-animation 12s linear forwards;
+      -webkit-animation: plane3-animation 12s linear forwards;
+      -moz-animation: plane3-animation 12s linear forwards;
+      -o-animation: plane3-animation 12s linear forwards;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      @media screen and ($tablet2) {
+        animation: plane3-animation 8s linear forwards;
+        -webkit-animation: plane3-animation 8s linear forwards;
+        -moz-animation: plane3-animation 8s linear forwards;
+        -o-animation: plane3-animation 8s linear forwards;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+
+        @keyframes plane3-animation {
+          0% {transform:translate(0%, 35px) rotate(-5deg) scale(0.7);}
+          3% {transform:translate(-3%, 100px) rotate(5deg) scale(0.7);}
+          5% {transform:translate(-5%, 127px) rotate(10deg) scale(0.75);}
+          10% {transform:translate(-10%, 182px) rotate(20deg) scale(0.8);}
+          15% {transform:translate(-15%, 220px) rotate(25deg) scale(0.85);}
+          20% {transform:translate(-20%, 250px) rotate(30deg) scale(0.9);}
+          25% {transform:translate(-25%, 275px) rotate(31deg) scale(0.95);}
+          30% {transform:translate(-30%, 295px) rotate(33deg) scale(1);}
+          35% {transform:translate(-35%, 313px) rotate(35deg) scale(1.05);}
+          40% {transform:translate(-40%, 328px) rotate(37deg) scale(1.1);}
+          45% {transform:translate(-45%, 338px) rotate(37deg) scale(1.15);}
+          50% {transform:translate(-50%, 350px) rotate(40deg) scale(1.15);}
+          55% {transform:translate(-55%, 357px) rotate(40deg) scale(1.15);}
+          60% {transform:translate(-60%, 363px) rotate(42deg) scale(1.1);}
+          65% {transform:translate(-65%, 367px) rotate(44deg) scale(1.05);}
+          70% {transform:translate(-70%, 370px) rotate(45deg) scale(1);}
+          75% {transform:translate(-75%, 370px) rotate(45deg) scale(0.95);}
+          80% {transform:translate(-80%, 368px) rotate(46deg) scale(0.9);}
+          85% {transform:translate(-85%, 365px) rotate(47deg) scale(0.85);}
+          90% {transform:translate(-90%, 360px) rotate(48deg) scale(0.8);}
+          95% {transform:translate(-95%, 352px) rotate(49deg) scale(0.75);}
+          100% {transform:translate(-100%, 343px) rotate(50deg) scale(0.7)}
+        }
+        @-webkit-keyframes plane3-animation {
+          0% {transform:translate(0%, 35px) rotate(-5deg) scale(0.7);}
+          3% {transform:translate(-3%, 100px) rotate(5deg) scale(0.7);}
+          5% {transform:translate(-5%, 127px) rotate(10deg) scale(0.75);}
+          10% {transform:translate(-10%, 182px) rotate(20deg) scale(0.8);}
+          15% {transform:translate(-15%, 220px) rotate(25deg) scale(0.85);}
+          20% {transform:translate(-20%, 250px) rotate(30deg) scale(0.9);}
+          25% {transform:translate(-25%, 275px) rotate(31deg) scale(0.95);}
+          30% {transform:translate(-30%, 295px) rotate(33deg) scale(1);}
+          35% {transform:translate(-35%, 313px) rotate(35deg) scale(1.05);}
+          40% {transform:translate(-40%, 328px) rotate(37deg) scale(1.1);}
+          45% {transform:translate(-45%, 338px) rotate(37deg) scale(1.15);}
+          50% {transform:translate(-50%, 350px) rotate(40deg) scale(1.15);}
+          55% {transform:translate(-55%, 357px) rotate(40deg) scale(1.15);}
+          60% {transform:translate(-60%, 363px) rotate(42deg) scale(1.1);}
+          65% {transform:translate(-65%, 367px) rotate(44deg) scale(1.05);}
+          70% {transform:translate(-70%, 370px) rotate(45deg) scale(1);}
+          75% {transform:translate(-75%, 370px) rotate(45deg) scale(0.95);}
+          80% {transform:translate(-80%, 368px) rotate(46deg) scale(0.9);}
+          85% {transform:translate(-85%, 365px) rotate(47deg) scale(0.85);}
+          90% {transform:translate(-90%, 360px) rotate(48deg) scale(0.8);}
+          95% {transform:translate(-95%, 352px) rotate(49deg) scale(0.75);}
+          100% {transform:translate(-100%, 343px) rotate(50deg) scale(0.7)}
+        }
+        @-moz-keyframes plane3-animation {
+          0% {transform:translate(0%, 35px) rotate(-5deg) scale(0.7);}
+          3% {transform:translate(-3%, 100px) rotate(5deg) scale(0.7);}
+          5% {transform:translate(-5%, 127px) rotate(10deg) scale(0.75);}
+          10% {transform:translate(-10%, 182px) rotate(20deg) scale(0.8);}
+          15% {transform:translate(-15%, 220px) rotate(25deg) scale(0.85);}
+          20% {transform:translate(-20%, 250px) rotate(30deg) scale(0.9);}
+          25% {transform:translate(-25%, 275px) rotate(31deg) scale(0.95);}
+          30% {transform:translate(-30%, 295px) rotate(33deg) scale(1);}
+          35% {transform:translate(-35%, 313px) rotate(35deg) scale(1.05);}
+          40% {transform:translate(-40%, 328px) rotate(37deg) scale(1.1);}
+          45% {transform:translate(-45%, 338px) rotate(37deg) scale(1.15);}
+          50% {transform:translate(-50%, 350px) rotate(40deg) scale(1.15);}
+          55% {transform:translate(-55%, 357px) rotate(40deg) scale(1.15);}
+          60% {transform:translate(-60%, 363px) rotate(42deg) scale(1.1);}
+          65% {transform:translate(-65%, 367px) rotate(44deg) scale(1.05);}
+          70% {transform:translate(-70%, 370px) rotate(45deg) scale(1);}
+          75% {transform:translate(-75%, 370px) rotate(45deg) scale(0.95);}
+          80% {transform:translate(-80%, 368px) rotate(46deg) scale(0.9);}
+          85% {transform:translate(-85%, 365px) rotate(47deg) scale(0.85);}
+          90% {transform:translate(-90%, 360px) rotate(48deg) scale(0.8);}
+          95% {transform:translate(-95%, 352px) rotate(49deg) scale(0.75);}
+          100% {transform:translate(-100%, 343px) rotate(50deg) scale(0.7)}
+        }
+        @-o-keyframes plane3-animation {
+          0% {transform:translate(0%, 35px) rotate(-5deg) scale(0.7);}
+          3% {transform:translate(-3%, 100px) rotate(5deg) scale(0.7);}
+          5% {transform:translate(-5%, 127px) rotate(10deg) scale(0.75);}
+          10% {transform:translate(-10%, 182px) rotate(20deg) scale(0.8);}
+          15% {transform:translate(-15%, 220px) rotate(25deg) scale(0.85);}
+          20% {transform:translate(-20%, 250px) rotate(30deg) scale(0.9);}
+          25% {transform:translate(-25%, 275px) rotate(31deg) scale(0.95);}
+          30% {transform:translate(-30%, 295px) rotate(33deg) scale(1);}
+          35% {transform:translate(-35%, 313px) rotate(35deg) scale(1.05);}
+          40% {transform:translate(-40%, 328px) rotate(37deg) scale(1.1);}
+          45% {transform:translate(-45%, 338px) rotate(37deg) scale(1.15);}
+          50% {transform:translate(-50%, 350px) rotate(40deg) scale(1.15);}
+          55% {transform:translate(-55%, 357px) rotate(40deg) scale(1.15);}
+          60% {transform:translate(-60%, 363px) rotate(42deg) scale(1.1);}
+          65% {transform:translate(-65%, 367px) rotate(44deg) scale(1.05);}
+          70% {transform:translate(-70%, 370px) rotate(45deg) scale(1);}
+          75% {transform:translate(-75%, 370px) rotate(45deg) scale(0.95);}
+          80% {transform:translate(-80%, 368px) rotate(46deg) scale(0.9);}
+          85% {transform:translate(-85%, 365px) rotate(47deg) scale(0.85);}
+          90% {transform:translate(-90%, 360px) rotate(48deg) scale(0.8);}
+          95% {transform:translate(-95%, 352px) rotate(49deg) scale(0.75);}
+          100% {transform:translate(-100%, 343px) rotate(50deg) scale(0.7)}
+        }
+      }
+
+      @keyframes plane3-animation {
+        0% {transform:translate(0%, 35px) rotate(-5deg) scale(0.7);}
+        3% {transform:translate(-3%, 100px) rotate(5deg) scale(0.7);}
+        5% {transform:translate(-5%, 127px) rotate(10deg) scale(0.75);}
+        10% {transform:translate(-10%, 182px) rotate(20deg) scale(0.8);}
+        15% {transform:translate(-15%, 220px) rotate(25deg) scale(0.85);}
+        20% {transform:translate(-20%, 250px) rotate(30deg) scale(0.9);}
+        25% {transform:translate(-25%, 275px) rotate(31deg) scale(0.95);}
+        30% {transform:translate(-30%, 295px) rotate(33deg) scale(1);}
+        35% {transform:translate(-35%, 313px) rotate(35deg) scale(1.05);}
+        40% {transform:translate(-40%, 328px) rotate(37deg) scale(1.1);}
+        45% {transform:translate(-45%, 338px) rotate(37deg) scale(1.15);}
+        50% {transform:translate(-50%, 350px) rotate(40deg) scale(1.15);}
+        55% {transform:translate(-55%, 357px) rotate(40deg) scale(1.15);}
+        60% {transform:translate(-60%, 363px) rotate(42deg) scale(1.1);}
+        65% {transform:translate(-65%, 367px) rotate(44deg) scale(1.05);}
+        70% {transform:translate(-70%, 370px) rotate(45deg) scale(1);}
+        75% {transform:translate(-75%, 370px) rotate(45deg) scale(0.95);}
+        80% {transform:translate(-80%, 368px) rotate(46deg) scale(0.9);}
+        85% {transform:translate(-85%, 365px) rotate(47deg) scale(0.85);}
+        90% {transform:translate(-90%, 360px) rotate(48deg) scale(0.8);}
+        95% {transform:translate(-95%, 352px) rotate(49deg) scale(0.75);}
+        100% {transform:translate(-100%, 343px) rotate(50deg) scale(0.7)}
+      }
+
+      @-webkit-keyframes plane3-animation {
+        0% {transform:translate(0%, 35px) rotate(-5deg) scale(0.7);}
+        3% {transform:translate(-3%, 100px) rotate(5deg) scale(0.7);}
+        5% {transform:translate(-5%, 127px) rotate(10deg) scale(0.75);}
+        10% {transform:translate(-10%, 182px) rotate(20deg) scale(0.8);}
+        15% {transform:translate(-15%, 220px) rotate(25deg) scale(0.85);}
+        20% {transform:translate(-20%, 250px) rotate(30deg) scale(0.9);}
+        25% {transform:translate(-25%, 275px) rotate(31deg) scale(0.95);}
+        30% {transform:translate(-30%, 295px) rotate(33deg) scale(1);}
+        35% {transform:translate(-35%, 313px) rotate(35deg) scale(1.05);}
+        40% {transform:translate(-40%, 328px) rotate(37deg) scale(1.1);}
+        45% {transform:translate(-45%, 338px) rotate(37deg) scale(1.15);}
+        50% {transform:translate(-50%, 350px) rotate(40deg) scale(1.15);}
+        55% {transform:translate(-55%, 357px) rotate(40deg) scale(1.15);}
+        60% {transform:translate(-60%, 363px) rotate(42deg) scale(1.1);}
+        65% {transform:translate(-65%, 367px) rotate(44deg) scale(1.05);}
+        70% {transform:translate(-70%, 370px) rotate(45deg) scale(1);}
+        75% {transform:translate(-75%, 370px) rotate(45deg) scale(0.95);}
+        80% {transform:translate(-80%, 368px) rotate(46deg) scale(0.9);}
+        85% {transform:translate(-85%, 365px) rotate(47deg) scale(0.85);}
+        90% {transform:translate(-90%, 360px) rotate(48deg) scale(0.8);}
+        95% {transform:translate(-95%, 352px) rotate(49deg) scale(0.75);}
+        100% {transform:translate(-100%, 343px) rotate(50deg) scale(0.7)}
+      }
+
+      @-moz-keyframes plane3-animation {
+        0% {transform:translate(0%, 35px) rotate(-5deg) scale(0.7);}
+        3% {transform:translate(-3%, 100px) rotate(5deg) scale(0.7);}
+        5% {transform:translate(-5%, 127px) rotate(10deg) scale(0.75);}
+        10% {transform:translate(-10%, 182px) rotate(20deg) scale(0.8);}
+        15% {transform:translate(-15%, 220px) rotate(25deg) scale(0.85);}
+        20% {transform:translate(-20%, 250px) rotate(30deg) scale(0.9);}
+        25% {transform:translate(-25%, 275px) rotate(31deg) scale(0.95);}
+        30% {transform:translate(-30%, 295px) rotate(33deg) scale(1);}
+        35% {transform:translate(-35%, 313px) rotate(35deg) scale(1.05);}
+        40% {transform:translate(-40%, 328px) rotate(37deg) scale(1.1);}
+        45% {transform:translate(-45%, 338px) rotate(37deg) scale(1.15);}
+        50% {transform:translate(-50%, 350px) rotate(40deg) scale(1.15);}
+        55% {transform:translate(-55%, 357px) rotate(40deg) scale(1.15);}
+        60% {transform:translate(-60%, 363px) rotate(42deg) scale(1.1);}
+        65% {transform:translate(-65%, 367px) rotate(44deg) scale(1.05);}
+        70% {transform:translate(-70%, 370px) rotate(45deg) scale(1);}
+        75% {transform:translate(-75%, 370px) rotate(45deg) scale(0.95);}
+        80% {transform:translate(-80%, 368px) rotate(46deg) scale(0.9);}
+        85% {transform:translate(-85%, 365px) rotate(47deg) scale(0.85);}
+        90% {transform:translate(-90%, 360px) rotate(48deg) scale(0.8);}
+        95% {transform:translate(-95%, 352px) rotate(49deg) scale(0.75);}
+        100% {transform:translate(-100%, 343px) rotate(50deg) scale(0.7)}
+      }
+
+      @-o-keyframes plane3-animation {
+        0% {transform:translate(0%, 35px) rotate(-5deg) scale(0.7);}
+        3% {transform:translate(-3%, 100px) rotate(5deg) scale(0.7);}
+        5% {transform:translate(-5%, 127px) rotate(10deg) scale(0.75);}
+        10% {transform:translate(-10%, 182px) rotate(20deg) scale(0.8);}
+        15% {transform:translate(-15%, 220px) rotate(25deg) scale(0.85);}
+        20% {transform:translate(-20%, 250px) rotate(30deg) scale(0.9);}
+        25% {transform:translate(-25%, 275px) rotate(31deg) scale(0.95);}
+        30% {transform:translate(-30%, 295px) rotate(33deg) scale(1);}
+        35% {transform:translate(-35%, 313px) rotate(35deg) scale(1.05);}
+        40% {transform:translate(-40%, 328px) rotate(37deg) scale(1.1);}
+        45% {transform:translate(-45%, 338px) rotate(37deg) scale(1.15);}
+        50% {transform:translate(-50%, 350px) rotate(40deg) scale(1.15);}
+        55% {transform:translate(-55%, 357px) rotate(40deg) scale(1.15);}
+        60% {transform:translate(-60%, 363px) rotate(42deg) scale(1.1);}
+        65% {transform:translate(-65%, 367px) rotate(44deg) scale(1.05);}
+        70% {transform:translate(-70%, 370px) rotate(45deg) scale(1);}
+        75% {transform:translate(-75%, 370px) rotate(45deg) scale(0.95);}
+        80% {transform:translate(-80%, 368px) rotate(46deg) scale(0.9);}
+        85% {transform:translate(-85%, 365px) rotate(47deg) scale(0.85);}
+        90% {transform:translate(-90%, 360px) rotate(48deg) scale(0.8);}
+        95% {transform:translate(-95%, 352px) rotate(49deg) scale(0.75);}
+        100% {transform:translate(-100%, 343px) rotate(50deg) scale(0.7)}
+      }
+    }
+
+    &.one,
+    &.two,
+    &.three{
+      @media screen and ($tablet1) {
+        display: none;
+      }
+    }
+  }
+
+  &_wrapper{
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
+    @media screen and ($desktop1) {
+      width: 590px;
+    }
+    @media screen and ($tablet2) {
+      width: 486px;
+    }
+    @media screen and ($tablet1) {
+      width: 556px;
+      transform: translate(-50%, -50%);
+      padding-left: 8px;
+    }
+    @media screen and ($mobile3) {
+      width: 100%;
+      padding: 0 8px;
+    }
+  }
+
+  &_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 480px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px $shadow-btn-main-two;
+    padding: 35px;
+    margin-top: 90px;
+    @media screen and ($desktop1) {
+      width: 480px;
+      padding: 35px;
+      margin-top: 70px;
+    }
+    @media screen and ($tablet2) {
+      width: 478px;
+      padding: 35px;
+      margin-top: 70px;
+    }
+    @media screen and ($tablet1) {
+      width: 540px;
+      padding: 35px;
+      margin-top: 70px;
+    }
+    @media screen and ($mobile3) {
+      width: 100%;
+      padding: 35px;
+      margin-top: 50px;
+    }
+    @media screen and ($mobile2) {
+      width: 100%;
+      padding: 30px;
+      margin-top: 50px;
+    }
+    @media screen and ($mobile1) {
+      padding: 30px 20px;
+    }
+  }
+
+  &_caption{
+    font-family: 'Gilroy-Black';
+    font-size: $text-size-xxl;
+    text-align: center;
+    text-transform: uppercase;
+    @media screen and ($tablet1) {
+      font-size: $text-size-xxl;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-xl;
+    }
+    @media screen and ($mobile1) {
+      line-height: 1.2em;
+    }
+  }
+
+  &_description{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-m;
+    text-align: center;
+    margin-top: 10px;
+    @media screen and ($tablet1) {
+      font-size: $text-size-s;
+      margin-top: 10px;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-xs;
+      margin-top: 10px;
+    }
+  }
+
+  &_form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    @media screen and ($tablet1) {
+      margin-top: 40px;
+    }
+    @media screen and ($mobile3) {
+      margin-top: 30px;
+    }
+    @media screen and ($mobile1) {
+      margin-top: 20px;
+    }
+  }
+
+  &_input{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    height: 50px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid $border-color-input;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    @media screen and ($tablet2) {
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet1) {
+      font-size: $text-size-s;
+      height: 48px;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-xs;
+      height: 44px;
+    }
+    @media screen and ($mobile1) {
+      margin-bottom: 15px;
+      padding-left: 10px;
+      height: 38px;
+    }
+
+    &::placeholder{
+      color: $text-color-main-three;
+    }
+
+    &:focus{
+      border: 1px solid $btn-color-main;
+    }
+  }
+
+  &_comment{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-s;
+    height: 90px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid $border-color-input;
+    padding: 15px;
+    margin-bottom: 20px;
+    @media screen and ($mobile3) {
+      font-size: $text-size-xs;
+    }
+    @media screen and ($mobile1) {
+      margin-bottom: 15px;
+      height: 70px;
+      padding: 10px;
+    }
+
+    &::placeholder{
+      color: $text-color-main-three;
+    }
+
+    &:focus{
+      border: 1px solid $btn-color-main;
+    }
+  }
+
+  &_img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+  }
+}

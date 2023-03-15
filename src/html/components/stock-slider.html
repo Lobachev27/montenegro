@@ -1,0 +1,29 @@
+<section class="stock mgt-120">
+  <div class="container">
+    <div class="title_box">
+      <span class="title_decor">Смотрите</span>
+      <h2 class="title">Другие акции</h2>
+    </div>
+  </div>
+  <div class="stock_slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <div class="swiper-slide">
+          <div class="stock_item">
+            <img class="stock_img" src="`+context.arr[i].image+`">
+            <img class="stock_bg" src="./img/stock_bg.png">
+            <div class="stock_mask"></div>
+            <div class="stock_info">
+              <h3 class="stock_caption">`+context.arr[i].caption+`</h3>
+              <div class="stock_description">`+context.arr[i].description+`</div>
+              <a class="btn-bl more" href="`+context.arr[i].link+`">Подробнее</a>
+            </div>
+            <a class="stock_link" href="`+context.arr[i].link+`"></a>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

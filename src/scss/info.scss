@@ -1,0 +1,318 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.info{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  margin: 150px 0 0;
+  z-index: 1;
+  @media screen and ($desktop1) {
+    margin: 120px 0;
+  }
+  @media screen and ($tablet2) {
+    margin: 350px 0 130px;
+  }
+  @media screen and ($tablet1) {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  @media screen and ($mobile2) {
+    margin-top: 320px;
+  }
+  @media screen and ($mobile1) {
+    margin-top: 280px;
+  }
+
+  &.tour{
+    @media screen and ($desktop1) {
+      margin: 120px 0 100px;
+    }
+    @media screen and ($tablet2) {
+      margin: 120px 0 100px;
+    }
+    @media screen and ($tablet1) {
+      margin: 80px 0 100px;
+    }
+  }
+
+  & .ident{
+    @media screen and ($tablet1) {
+      display: none;
+    }
+  }
+
+  &_bg{
+    /*position: absolute;
+    background: url("../img/montenegro-text-1.png") no-repeat 0px;
+    background-size: cover;
+    width: 100%;
+    height: 10vw;
+    top: 0;
+    z-index: 1;*/
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Gilroy-Black';
+    font-size: 15.8vw;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+    color: $text-imp-color;
+    width: 100%;
+    top: -0.15em;
+    z-index: -1;
+    opacity: 0.1;
+    @media screen and ($mobile3) {
+      display: none;
+    }
+
+    &_two{
+      position: absolute;
+      background: url("../img/circle_bg.png") no-repeat 0px;
+      background-size: cover;
+      width: 100%;
+      height: 55vw;
+      top: 100px;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+  }
+
+  &_left{
+    display: grid;
+    grid-template-columns: auto 780px;
+    width: calc(50% - 20px);
+    @media screen and ($desktop1) {
+      grid-template-columns: auto 570px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: auto 466px;
+    }
+    @media screen and ($tablet1) {
+      display: block;
+      margin: 0 auto 50px;
+      width: 748px;
+    }
+    @media screen and ($mobile5) {
+      margin: 0 auto 30px;
+      width: 556px;
+    }
+    @media screen and ($mobile3) {
+      width: 100%;
+    }
+  }
+
+  &_container{
+    padding-left: 8px;
+    @media screen and ($tablet1) {
+      width: 100%;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  &_box{
+    width: 500px;
+    margin-top: 60px;
+    @media screen and ($desktop1) {
+      width: 500px;
+      margin-top: 50px;
+    }
+    @media screen and ($tablet2) {
+      width: 440px;
+      margin-top: 40px;
+    }
+    @media screen and ($tablet1) {
+      width: 100%;
+    }
+    @media screen and ($mobile3) {
+      margin-top: 20px;
+    }
+    @media screen and ($mobile2) {
+      display: none;
+    }
+
+    &.extra{
+      @media screen and ($mobile2) {
+        display: block;
+      }
+    }
+  }
+
+  &_description{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-m;
+    margin-bottom: 30px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-m;
+      margin-bottom: 20px;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-s;
+      margin-bottom: 20px;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-xs;
+      margin-bottom: 15px;
+    }
+
+    &.bold{
+      font-family: 'Gilroy-bold';
+      font-weight: bold;
+    }
+
+    &.imp {
+      font-family: 'Gilroy-bold';
+      font-weight: bold;
+      font-size: $text-size-xxl;
+      @media screen and ($tablet2) {
+        font-size: $text-size-l;
+      }
+      @media screen and ($mobile3) {
+        font-size: $text-size-s;
+      }
+    }
+
+    & p{
+      margin-bottom: 30px;
+      @media screen and ($mobile3) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &_slider{
+    position: relative;
+    width: calc(50% + 20px);
+    overflow: hidden;
+    @media screen and ($tablet1) {
+      width: 100%;
+    }
+  }
+
+  & .swiper-container {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    width: calc(125% + 50px);
+    margin-right: -25%;
+    background-color: white;
+    @media screen and ($tablet2) {
+      padding-left: 10px;
+      width: calc(125% + 50px);
+    }
+    @media screen and ($tablet1) {
+      width: 100%;
+      padding-bottom: 70px;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-right: 0;
+    }
+    @media screen and ($mobile3) {
+      padding-bottom: 60px;
+      width: 125%;
+      margin-right: -25%;
+    }
+    @media screen and ($mobile2) {
+      padding-bottom: 60px;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  & .swiper-slide {
+    position: relative;
+    height: auto;
+  }
+
+  &_img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 352px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px $shadow-btn-main-two;
+    @media screen and ($tablet2) {
+      box-shadow: 0px 7px 20px $shadow-btn-main-two;
+    }
+  }
+
+  & .swiper-slide-next {
+    opacity: 0.4;
+    @media screen and ($tablet1) {
+      opacity: 1;
+    }
+    @media screen and ($mobile3) {
+      opacity: 0.4;
+    }
+    @media screen and ($mobile2) {
+      opacity: 1;
+    }
+  }
+
+  & .swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    @media screen and ($tablet1) {
+      left: 50%;
+    }
+    @media screen and ($mobile3) {
+      left: 40%;
+    }
+    @media screen and ($mobile2) {
+      left: 50%;
+    }
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    background-color: #8999ab;
+    border: 3px solid #ffffff;
+    opacity: 1;
+    outline: none;
+    margin: 0 20px;
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background-color: $btn-color-main;
+    border: none;
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+
+  & .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+  }
+}

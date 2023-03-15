@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Полезное"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: true,
+    linkActive: 6,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/screen.html", {
+    context: {
+      image: './img/screen-1.jpg',
+      title: 'Полезное',
+      way: '<div class="page_way"><a class="page_way_link" href="./">Главная</a><span> — </span><div class="page_way_link">Полезное</div></div>',
+    }
+  })
+
+  @@include("./components/article.html", {
+    context: {
+      arr: [
+        {'label': 'Достопримечательности', 'image': './img/article-1.jpg', 'caption': 'Нудистский пляж Ада Бояна', 'description': 'Нудистский пляж Ада Бояна - это единственный в Черногории и один из немногих в мире курортов. которые созданы специально для поклонников натуристического отдыха.', 'link': './article_page.html',},
+        {'label': 'Рейтинг', 'image': './img/article-2.jpg', 'caption': 'Самые красивые места черногории', 'description': 'Черногория поистине одна из самых красивых стран. Природа и архитектура завораживают с первого взгляда. За один раз точно невозможно посетить все. Поэтому сюда точно следует приехать хотя бы дважды.', 'link': './article_page.html',},
+        {'label': 'Достопримечательности', 'image': './img/article-3.jpg', 'caption': 'Скадарское озеро', 'description': 'Скадарское озеро – это одна из самых красивых достопримечательностей Черногории. Озеро является самым крупным пресноводным водоемом на Балканском полуострове.', 'link': './article_page.html',},
+        {'label': 'Достопримечательности', 'image': './img/article-1.jpg', 'caption': 'Нудистский пляж Ада Бояна', 'description': 'Нудистский пляж Ада Бояна - это единственный в Черногории и один из немногих в мире курортов. которые созданы специально для поклонников натуристического отдыха.', 'link': './article_page.html',},
+        {'label': 'Рейтинг', 'image': './img/article-2.jpg', 'caption': 'Самые красивые места черногории', 'description': 'Черногория поистине одна из самых красивых стран. Природа и архитектура завораживают с первого взгляда. За один раз точно невозможно посетить все. Поэтому сюда точно следует приехать хотя бы дважды.', 'link': './article_page.html',},
+        {'label': 'Достопримечательности', 'image': './img/article-3.jpg', 'caption': 'Скадарское озеро', 'description': 'Скадарское озеро – это одна из самых красивых достопримечательностей Черногории. Озеро является самым крупным пресноводным водоемом на Балканском полуострове.', 'link': './article_page.html',},
+        {'label': 'Достопримечательности', 'image': './img/article-1.jpg', 'caption': 'Нудистский пляж Ада Бояна', 'description': 'Нудистский пляж Ада Бояна - это единственный в Черногории и один из немногих в мире курортов. которые созданы специально для поклонников натуристического отдыха.', 'link': './article_page.html',},
+        {'label': 'Рейтинг', 'image': './img/article-2.jpg', 'caption': 'Самые красивые места черногории', 'description': 'Черногория поистине одна из самых красивых стран. Природа и архитектура завораживают с первого взгляда. За один раз точно невозможно посетить все. Поэтому сюда точно следует приехать хотя бы дважды.', 'link': './article_page.html',},
+        {'label': 'Достопримечательности', 'image': './img/article-3.jpg', 'caption': 'Скадарское озеро', 'description': 'Скадарское озеро – это одна из самых красивых достопримечательностей Черногории. Озеро является самым крупным пресноводным водоемом на Балканском полуострове.', 'link': './article_page.html',},
+      ]
+    }
+  })
+
+  @@include("./components/directions.html", {
+    context: {
+      class: '',
+      arr: [
+        {
+          class: 'one',
+          image: './img/directions-1.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Котор</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'two',
+          image: './img/directions-2.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Будва</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'three',
+          image: './img/directions-3.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Бар</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'four',
+          image: './img/directions-4.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Херцег-Нови</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'five',
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'six',
+          image: './img/directions-6.jpg',
+          content: '<div class="directions_more"><div class="directions_more_icon"></div><div class="directions_more_text"><span>Все</span> направления</div></div>',
+          link: './tours.html',
+        },
+      ]
+    }
+  })
+
+  @@include("./components/hotel.html", {
+    context: {
+      arr: [
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+      ]
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

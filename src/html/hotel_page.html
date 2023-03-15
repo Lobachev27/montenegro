@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Apart Hotel Sea Fort"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: true,
+    linkActive: 2,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/screen.html", {
+    context: {
+      image: './img/screen-3.jpg',
+      title: 'Apart Hotel Sea Fort',
+      way: '<div class="page_way"><a class="page_way_link" href="./">Главная</a><span> — </span><a class="page_way_link" href="./hotel.html">Каталог отелей</a><span> — </span><p class="page_way_link">Apart Hotel Sea Fort</p></div>',
+    }
+  })
+
+  <section class="filter_wrapper">
+    <div class="container">
+      <div class="filter shadow">
+        <h3 class="filter_name">Бронирование отеля</h3>
+        <form class="filter_form input-eight">
+          <div class="filter_calendar_wrapper">
+            <input id="datepicker2" class="filter_calendar" type="text" placeholder="Дата заезда" autocomplete="off">
+            <label for="datepicker2">&nbsp;</label>
+          </div>
+          <div class="filter_calendar_wrapper">
+            <input id="datepicker3" class="filter_calendar" type="text" placeholder="Дата выезда" autocomplete="off">
+            <label for="datepicker3">&nbsp;</label>
+          </div>
+          <div class="filter_select">
+            <div class="filter_select_main">Количество взрослых</div>
+            <div class="filter_select_list">
+              <div class="filter_select_item">1</div>
+              <div class="filter_select_item">2</div>
+              <div class="filter_select_item">3</div>
+              <div class="filter_select_item">4</div>
+              <div class="filter_select_item">5</div>
+              <div class="filter_select_item">6</div>
+              <div class="filter_select_item">7</div>
+              <div class="filter_select_item">8</div>
+            </div>
+          </div>
+          <div class="filter_select">
+            <div class="filter_select_main">Количество детей</div>
+            <div class="filter_select_list">
+              <div class="filter_select_item">0</div>
+              <div class="filter_select_item">1</div>
+              <div class="filter_select_item">2</div>
+              <div class="filter_select_item">3</div>
+              <div class="filter_select_item">4</div>
+              <div class="filter_select_item">5</div>
+              <div class="filter_select_item">6</div>
+              <div class="filter_select_item">7</div>
+              <div class="filter_select_item">8</div>
+            </div>
+          </div>
+          <input class="filter_input" name="name" type="text" placeholder="Введите имя" autocomplete="off" required>
+          <input class="filter_input" name="phone" type="text" placeholder="Введите телефон" autocomplete="off" required>
+          <input class="filter_input" name="e-mail" type="text" placeholder="Введите E-mail" autocomplete="off">
+          <button class="btn-bl" type="submit">Бронировать отель</button>
+          <!--<label class="subscription_confirm">
+            <input class="subscription_confirm_checked" type="checkbox" name="confirm">
+            <span class="subscription_confirm_checked-custom"></span>
+            <span class="subscription_confirm_label">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных.</span>
+          </label>-->
+          <label class="checkbox">
+            <input type="checkbox" name="confirm" required>
+            <div class="checkbox_text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных</div>
+          </label>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/info-hotel.html")
+
+  <section class="hotel_page">
+    <div class="container">
+      <div class="hotel_page_wrapper">
+        <div class="hotel_page_info">
+          <div class="hotel_page_block">
+            <h3 class="filter_name">Отель предлагает</h3>
+            <div class="hotel_page_list">
+              <div class="hotel_page_item bar">Круглосуточный бар</div>
+              <div class="hotel_page_item wi-fi">Бесплатный WI-FI</div>
+              <div class="hotel_page_item shop">Мини-рынок и магазины</div>
+              <div class="hotel_page_item restaurant">Ресторан</div>
+              <div class="hotel_page_item garage">Гараж на 24 места</div>
+              <div class="hotel_page_item children">Детская игровая комната</div>
+            </div>
+          </div>
+          <div class="hotel_page_extra">
+            <div class="hotel_page_block">
+              <h3 class="filter_name">Информация</h3>
+              <div class="hotel_page_description">
+                <p>Регистрация заезда: с 12:00</p>
+                <p>Регистрация отъезда: до 08:00-10:00</p>
+              </div>
+            </div>
+            <div class="hotel_page_block">
+              <h3 class="filter_name">Расположение</h3>
+              <div class="hotel_page_description">
+                <p>Obala Iva Novakovica, 85355 Сутоморе, Черногория</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="map_ahsf" class="contacts_map mg-0 w-100"></div>
+      </div>
+    </div>
+  </section>
+
+  @@include("./components/excursion.html", {
+    context: {
+      arr: [
+        {'image': './img/excursion.jpg', 'label': 'Экскурсии', 'caption': 'Бока-Которская бухта', 'description': 'Бока-Которская бухта – «чудо природы», «самый южный каньон», «самый южный фьорд», «удобнейшая гавань Европы». Именно так называют это место. Ну что ж, начинаем с города Котор.', 'price': '10 000 ₽',},
+        {'image': './img/excursion.jpg', 'label': 'Экскурсии', 'caption': 'Бока-Которская бухта', 'description': 'Бока-Которская бухта – «чудо природы», «самый южный каньон», «самый южный фьорд», «удобнейшая гавань Европы». Именно так называют это место. Ну что ж, начинаем с города Котор.', 'price': '10 000 ₽',},
+        {'image': './img/excursion.jpg', 'label': 'Экскурсии', 'caption': 'Бока-Которская бухта', 'description': 'Бока-Которская бухта – «чудо природы», «самый южный каньон», «самый южный фьорд», «удобнейшая гавань Европы». Именно так называют это место. Ну что ж, начинаем с города Котор.', 'price': '10 000 ₽',},
+        {'image': './img/excursion.jpg', 'label': 'Экскурсии', 'caption': 'Бока-Которская бухта', 'description': 'Бока-Которская бухта – «чудо природы», «самый южный каньон», «самый южный фьорд», «удобнейшая гавань Европы». Именно так называют это место. Ну что ж, начинаем с города Котор.', 'price': '10 000 ₽',},
+      ]
+    }
+  })
+
+  @@include("./components/hotel.html", {
+    context: {
+      arr: [
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+        {'image': './img/hotel-monte-cristo.jpg', 'name': 'Hotel Monte Cristo', 'stars': '', 'description': 'Этот вариант находится в самом сердце города Котор. До пляжа можно дойти всего за 6 минут.', 'price': 'от 5 000 ₽', 'link': './hotel_page.html',},
+      ]
+    }
+  })
+
+  @@include("./components/directions-slider.html", {
+    context: {
+      arr: [
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+      ]
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

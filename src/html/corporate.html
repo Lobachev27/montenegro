@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Корпоративный отдых"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: true,
+    linkActive: false,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/screen.html", {
+    context: {
+      image: './img/screen-1.jpg',
+      title: 'Корпоративный отдых',
+      way: '<div class="page_way"><a class="page_way_link" href="./">Главная</a><span> — </span><p class="page_way_link">Корпоративный отдых</p></div>',
+    }
+  })
+
+  <div class="container">
+    <div class="no_page">Уважаемые посетители сайта!
+      Данный раздел находится в разработке, в самое ближайшее время мы наполним его информацией. Приносим свои извинения, всю интересующую вас информацию вы можете получить по телефону <a href="tel:+74991305509">+7 (499) 130 55 09</a>
+    </div>
+  </div>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

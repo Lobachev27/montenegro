@@ -1,0 +1,619 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.filter{
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: white;
+  @media screen and ($mobile3) {
+    width: 100%;
+  }
+
+  &.shadow{
+    box-shadow: 0px 5px 20px $shadow-btn-main-two;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 0 auto 120px;
+    @media screen and ($desktop1) {
+      padding: 40px;
+      margin: 0 auto 120px;
+    }
+    @media screen and ($tablet1) {
+      padding: 30px;
+      margin: 0 auto 100px;
+    }
+    @media screen and ($mobile5) {
+      margin: 0 auto 80px;
+    }
+    @media screen and (max-width: 360px) {
+      padding: 30px 20px;
+    }
+  }
+
+  &_wrapper{
+    position: relative;
+    margin-top: -130px;
+    z-index: 10;
+  }
+
+  &_name{
+    font-family: 'Gilroy-Black';
+    font-size: $text-size-xl;
+    margin-bottom: 20px;
+    @media screen and ($mobile5) {
+      font-size: $text-size-m;
+    }
+  }
+
+  &_form{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 45px;
+    height: 48px;
+    @media screen and ($desktop1) {
+      grid-column-gap: 30px;
+      height: 42px;
+    }
+    @media screen and ($tablet2) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      grid-auto-flow: column;
+      height: auto;
+    }
+    @media screen and ($mobile5) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      grid-auto-flow: row;
+    }
+    @media screen and (max-width: 440px) {
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-auto-flow: row;
+    }
+
+    &.short{
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      @media screen and ($desktop1) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      @media screen and ($tablet1) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (max-width: 440px) {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-flow: row;
+      }
+    }
+
+    &.col-four{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-row-gap: 30px;
+      height: auto;
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 20px;
+      }
+      @media screen and ($mobile3) {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+      }
+
+      /*& .subscription_confirm{
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+        justify-content: start;
+        @media screen and ($tablet2) {
+          grid-column: 1 / 3;
+          grid-row: 3 / 4;
+        }
+        @media screen and ($mobile3) {
+          grid-column: 1 / 2;
+          grid-row: 5 / 6;
+        }
+      }*/
+
+      & .checkbox{
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+        justify-content: start;
+        margin-top: 0;
+        @media screen and ($tablet2) {
+          grid-column: 1 / 3;
+          grid-row: 3 / 4;
+        }
+        @media screen and ($mobile3) {
+          grid-column: 1 / 2;
+          grid-row: 5 / 6;
+        }
+      }
+    }
+
+    &.input-eight{
+      position: relative;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-row-gap: 30px;
+      height: auto;
+      @media screen and ($tablet2) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-row-gap: 20px;
+        grid-auto-flow: row !important;
+      }
+      @media screen and ($mobile5) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+      }
+      @media screen and ($mobile3) {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+      }
+
+      /*& .subscription_confirm{
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
+        justify-content: start;
+        @media screen and ($tablet2) {
+          grid-column: 1 / 4;
+          grid-row: 4 / 5;
+        }
+        @media screen and ($mobile5) {
+          grid-column: 1 / 3;
+          grid-row: 5 / 6;
+        }
+        @media screen and ($mobile3) {
+          grid-column: 1 / 2;
+          grid-row: 9 / 10;
+        }
+      }*/
+
+      & .checkbox{
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
+        justify-content: start;
+        margin-top: 0;
+        @media screen and ($tablet2) {
+          grid-column: 1 / 4;
+          grid-row: 4 / 5;
+        }
+        @media screen and ($mobile5) {
+          grid-column: 1 / 3;
+          grid-row: 5 / 6;
+        }
+        @media screen and ($mobile3) {
+          grid-column: 1 / 2;
+          grid-row: 9 / 10;
+        }
+      }
+    }
+  }
+
+  &_select{
+    position: relative;
+    background-color: #fff;
+
+    &_main{
+      font-family: 'Museo-Sans-Cyrl-300';
+      font-weight: bold;
+      font-size: $text-size-s;
+      color: $text-color-main-three;
+      position: relative;
+      border: 1px solid $border-color-input;
+      border-radius: 5px;
+      padding: 12px 20px;
+      z-index: 20;
+      @media screen and ($desktop1) {
+        font-size: $text-size-xs;
+        padding: 10px 15px;
+      }
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      &:before{
+        position: absolute;
+        font-family: 'FontAwesome';
+        font-size: $text-size-xl;
+        font-weight: bold;
+        color: $btn-color-main-two;
+        content: "\f107";
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        @media screen and ($desktop1) {
+          font-size: $text-size-l;
+          right: 15px;
+        }
+      }
+
+      &.active{
+        color: $text-color-main;
+        border: none;
+        border-radius: 5px 5px 0 0;
+        border-bottom: 1px solid $border-color-input-two;
+        box-shadow: 0px 5px 20px $shadow-btn-main-two;
+
+        &:before{
+          position: absolute;
+          color: $btn-color-main-two-hover;
+          content: "\f106";
+        }
+      }
+    }
+
+    &_list{
+      display: none;
+      background-color: white;
+      border-radius: 0 0 5px 5px;
+      width: 100%;
+      z-index: 21;
+
+      &.active {
+        position: absolute;
+        display: block;
+        top: 49px;
+        box-shadow: 0px 5px 20px $shadow-btn-main-two;
+        @media screen and ($desktop1) {
+          top: 42px;
+        }
+      }
+    }
+
+    &_item{
+      font-family: 'Gilroy-SemiBold';
+      font-size: $text-size-s;
+      padding: 12px 20px;
+      @media screen and ($desktop1) {
+        font-size: $text-size-xs;
+        padding: 10px 15px;
+      }
+
+      &:hover{
+        background-color: $input-active;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_input{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-weight: bold;
+    font-size: $text-size-s;
+    color: $text-color-main;
+    border: 1px solid $border-color-input;
+    border-radius: 5px;
+    outline:none;
+    padding: 12px 20px;
+    width: 100%;
+    height: 100%;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+      padding: 10px 15px;
+    }
+
+    &::placeholder{
+      color: $text-color-main-three;
+    }
+
+    &:focus{
+      box-shadow: 0px 5px 20px $shadow-btn-main-two;
+      border-radius: 5px 5px 5px 5px;
+      border: 1px solid #fff;
+    }
+  }
+
+  &_calendar{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-weight: bold;
+    font-size: $text-size-s;
+    color: $text-color-main-three;
+    border: 1px solid $border-color-input;
+    border-radius: 5px;
+    outline:none;
+    padding: 12px 20px;
+    width: 100%;
+    height: 100%;
+    @media screen and ($desktop1) {
+      font-size: $text-size-xs;
+      padding: 10px 15px;
+    }
+
+    &_wrapper{
+      position: relative;
+    }
+
+    & + label {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      transform: translateY(-50%);
+      @media screen and ($desktop1) {
+        right: 30px;
+      }
+
+      &:before {
+        font-family: 'FontAwesome';
+        content: "\f073";
+        position: absolute;
+        font-size: $text-size-xl;
+        color: $btn-color-main-two;
+        @media screen and ($desktop1) {
+          font-size: $text-size-l;
+        }
+      }
+    }
+
+    &:hover + label:before,
+    &:focus + label:before {
+      color: $btn-color-main-two-hover;
+      opacity: 1;
+    }
+
+    &:not(:focus):not(:hover):valid {
+      opacity: 1;
+    }
+
+    &:not(:focus):valid + label:before {
+      font-family: 'FontAwesome';
+      content: "\f073";
+      color: $btn-color-main-two-hover;
+      opacity: 0.7;
+    }
+
+    &:focus{
+      box-shadow: 0px 5px 20px $shadow-btn-main-two;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+}
+
+#ui-datepicker-div{
+  background-color: #fff;
+  width: 281px;
+  border: 1px solid $border-color-input;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0px 5px 20px $shadow-btn-main-two;
+  @media screen and ($desktop1) {
+    width: 209px;
+  }
+  @media screen and ($tablet2) {
+    width: 305px;
+  }
+  @media screen and ($tablet1) {
+    width: 231px;
+  }
+  @media screen and ($mobile5) {
+    width: 260px;
+  }
+  @media screen and ($mobile3) {
+    width: 46%;
+  }
+  @media screen and (max-width: 440px) {
+    width: calc(100% - 16px);
+  }
+
+  & .ui-datepicker-title{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-weight: bold;
+    color: $text-color-main-three;
+    padding-top: 3px;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      padding-top: 0;
+    }
+  }
+
+  & .ui-datepicker-header{
+    background-color: #fff;
+    border: none;
+    min-height: 40px;
+    @media screen and ($desktop1) {
+      margin-top: 10px;
+      min-height: 30px;
+    }
+  }
+
+  & .ui-datepicker-prev,
+  .ui-datepicker-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $btn-color-main-two;
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 50%;
+    margin-top: 3px;
+    opacity: 0.7;
+    @media screen and ($desktop1) {
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
+    }
+    @media screen and ($tablet2) {
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
+    }
+
+    &:hover{
+      background-color: $btn-color-main-two-hover;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+  }
+
+  & .ui-widget-header .ui-icon{
+    background-image: none;
+  }
+
+  & .ui-datepicker-prev{
+    &:before{
+      position: relative;
+      font-family: 'FontAwesome';
+      font-size: $text-size-m;
+      color: $text-color-white;
+      content: "\f104";
+      left: -1px;
+    }
+  }
+
+  & .ui-datepicker-next{
+    &:before{
+      position: relative;
+      font-family: 'FontAwesome';
+      font-size: $text-size-m;
+      color: $text-color-white;
+      content: "\f105";
+      right: -1px;
+    }
+  }
+
+  & .ui-datepicker-calendar{
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-weight: bold;
+    color: $text-color-main-three;
+    margin-bottom: 6px;
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    @media screen and ($mobile3) {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+  }
+
+  & .ui-state-default{
+    font-family: 'Museo-Sans-Cyrl-300';
+    color: $text-color-main-three;
+    background-color: #fff;
+    border: 1px solid $border-color-input;
+    border-radius: 5px;
+    width: 36px;
+    height: 32px;
+    padding-right: 4px;
+    @media screen and ($desktop1) {
+      width: 27px;
+      height: 27px;
+      padding-top: 1px;
+    }
+    @media screen and ($tablet2) {
+      width: 40px;
+      height: 30px;
+      padding-top: 2px;
+    }
+    @media screen and ($tablet1) {
+      width: 30px;
+      height: 30px;
+      padding-top: 2px;
+    }
+    @media screen and ($mobile5) {
+      width: 33px;
+      height: 30px;
+      padding-top: 2px;
+    }
+    @media screen and ($mobile3) {
+      width: 100%;
+      padding-right: 2px;
+    }
+    @media screen and (max-width: 440px) {
+      height: 35px;
+      padding-right: 4px;
+      padding-top: 5px;
+    }
+
+    &:hover{
+      background-color: #d3dbef;
+      transition: all 0.3s;
+    }
+  }
+
+  & .ui-state-highlight,
+  .ui-state-highlight:hover{
+    border: 2px solid $btn-color-main-two;
+    color: $btn-color-main-two;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+
+  & .ui-state-active,
+  .ui-state-active:hover{
+    background-color: $btn-color-main-two;
+    color: $text-color-white;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+
+  & .ui-datepicker-buttonpane{
+    display: none;
+  }
+}
+
+.order_hotel{
+  & #ui-datepicker-div{
+    width: 337px;
+    @media screen and ($desktop1) {
+      width: 248px;
+    }
+    @media screen and ($tablet2) {
+      width: 279px;
+    }
+    @media screen and ($tablet1) {
+      width: 211px;
+    }
+    @media screen and ($mobile5) {
+      width: 230px;
+    }
+    @media screen and ($mobile3) {
+      width: calc(100% - 76px);
+    }
+    @media screen and (max-width: 360px) {
+      width: calc(100% - 56px);
+    }
+
+    & .ui-state-default{
+      width: 44px;
+      @media screen and ($desktop1) {
+        width: 32px;
+      }
+      @media screen and ($tablet2) {
+        width: 36px;
+      }
+      @media screen and ($tablet1) {
+        width: 27px;
+      }
+      @media screen and ($mobile5) {
+        width: 29px;
+      }
+      @media screen and ($mobile3) {
+        width: 100%;
+      }
+      @media screen and (max-width: 360px) {
+        width: 100%;
+      }
+    }
+  }
+}

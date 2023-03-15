@@ -1,0 +1,144 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.contacts{
+  margin-top: 140px;
+  margin-bottom: 150px;
+  @media screen and ($tablet2) {
+    margin-top: 100px;
+  }
+  @media screen and ($tablet1) {
+    margin-top: 80px;
+  }
+  @media screen and ($mobile5) {
+    margin-top: 60px;
+  }
+  @media screen and ($mobile3) {
+    margin-bottom: 100px;
+  }
+
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    height: auto;
+    @media screen and ($tablet2) {
+      display: grid;
+      grid-template-columns: 35% 65%;
+    }
+    @media screen and ($tablet1) {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      height: auto;
+    }
+  }
+
+  &_info{
+    display: grid;
+    grid-template-rows: 140px auto;
+    height: 100%;
+    @media screen and ($desktop1) {
+      grid-template-rows: 130px auto;
+    }
+    @media screen and ($tablet2) {
+      grid-template-rows: 100px auto;
+    }
+    @media screen and ($tablet1) {
+      grid-template-rows: 100px auto;
+      padding-bottom: 50px;
+    }
+    @media screen and ($mobile5) {
+      grid-template-rows: 100px auto;
+      padding-bottom: 50px;
+    }
+    @media screen and ($mobile3) {
+      grid-template-rows: 80px auto;
+      padding-bottom: 50px;
+    }
+
+    &_box{
+      width: 440px;
+      @media screen and ($desktop1) {
+        width: 350px;
+      }
+      @media screen and ($tablet2) {
+        width: 100%;
+      }
+    }
+  }
+
+  &_item{
+    display: block;
+    position: relative;
+    font-family: 'Museo-Sans-Cyrl-300';
+    font-size: $text-size-m;
+    color: $text-color-main;
+    padding-left: 45px;
+    margin-bottom: 50px;
+    @media screen and ($desktop1) {
+      margin-bottom: 45px;
+    }
+    @media screen and ($tablet2) {
+      font-size: $text-size-s;
+      padding-left: 40px;
+      margin-bottom: 35px;
+    }
+    @media screen and ($mobile3) {
+      font-size: $text-size-xs;
+      padding-left: 30px;
+    }
+
+    &:nth-child(3){
+      margin-bottom: 80px;
+      @media screen and ($desktop1) {
+        margin-bottom: 80px;
+      }
+      @media screen and ($tablet2) {
+        margin-bottom: 60px;
+      }
+    }
+
+    &:before{
+      position: absolute;
+      font-family: 'FontAwesome';
+      color: $btn-color-main-two;
+      font-size: 23px;
+      font-weight: bold;
+      top: 0;
+      left: 10px;
+      transform: translateX(-50%);
+      @media screen and ($mobile3) {
+        font-size: 20px;
+      }
+    }
+
+    &.phone:before{
+      content: "\f095";
+    }
+
+    &.mail:before{
+      content: "\f1fa";
+    }
+
+    &.address:before{
+      content: "\f041";
+    }
+  }
+
+  &_map{
+    width: calc(100% - 40px);
+    height: 480px;
+    border-radius: 10px;
+    margin-left: 40px;
+    @media screen and ($tablet2) {
+      height: 400px;
+    }
+    @media screen and ($tablet1) {
+      width: 100%;
+      height: 300px;
+      margin-left: 0;
+    }
+    @media screen and ($mobile3) {
+      height: 250px;
+    }
+  }
+}

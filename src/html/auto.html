@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Аренда автомобилей"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    white: true,
+    linkActive: 4,
+  }
+})
+
+<main class="main">
+
+  @@include("./components/screen.html", {
+    context: {
+      image: './img/screen-1.jpg',
+      title: 'Аренда автомобилей',
+      way: '<div class="page_way"><a class="page_way_link" href="./">Главная</a><span> — </span><p class="page_way_link">Аренда автомобилей</p></div>',
+    }
+  })
+
+  @@include("./components/auto-list.html", {
+    context: {
+      arr: [
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+        {'image': './img/auto-1.jpg', 'brand': 'Opel Astra', 'model': 'Cabrio 2008', 'engine': 'Бензиновый', 'snowflake': 'Кондиционер', 'transmission': 'Автомат', 'music': 'CD-плеер', 'power': '120 л/с', 'seat': '5 мест', 'price': '5 000 ₽',},
+      ]
+    }
+  })
+
+  @@include("./components/directions.html", {
+    context: {
+      class: '',
+      arr: [
+        {
+          class: 'one',
+          image: './img/directions-1.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Котор</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'two',
+          image: './img/directions-2.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Будва</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'three',
+          image: './img/directions-3.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Бар</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'four',
+          image: './img/directions-4.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Херцег-Нови</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'five',
+          image: './img/directions-5.jpg',
+          content: '<div class="directions_info"><div class="directions_info_top"><div class="directions_name">Петровац</div><div class="directions_amount">Доступно 5 туров</div></div><div class="directions_info_bottom"><div class="directions_price">от 20 000 ₽</div></div></div>',
+          link: './tours_city.html',
+        },
+        {
+          class: 'six',
+          image: './img/directions-6.jpg',
+          content: '<div class="directions_more"><div class="directions_more_icon"></div><div class="directions_more_text"><span>Все</span> направления</div></div>',
+          link: './tours.html',
+        },
+      ]
+    }
+  })
+
+  <section class="booking">
+    <div class="container">
+      <div class="title_box">
+        <span class="title_decor">Изучите</span>
+        <h2 class="title">Условия аренды</h2>
+      </div>
+      <div class="booking_description">
+        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>
